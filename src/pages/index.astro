@@ -52,7 +52,7 @@ const projects: Project[] = [
 		},
 		links: {
 			github: "https://github.com/joshuawinningham/email-kpi",
-			live: "https://email-kpi.vercel.app"
+			live: "https://www.10xinbox.com/"
 		}
 	},
 	{
@@ -160,7 +160,7 @@ const projects: Project[] = [
 									alt={project.title}
 									class="w-full h-[400px] object-cover rounded-lg shadow-lg"
 									loading="lazy"
-									onError={`this.src='${project.fallbackImage}'`}
+									onerror={`this.src='${project.fallbackImage}'`}
 								/>
 								<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
 							</div>
