@@ -1,6 +1,6 @@
 ---
-import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
+import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
 
 interface Props {
 	title: string;
@@ -9,29 +9,41 @@ interface Props {
 	article?: boolean;
 }
 
-const { 
-	title, 
-	description = "Full Stack Developer specializing in Python, JavaScript, and modern web technologies. Experienced in building efficient web applications and software solutions.", 
+const {
+	title,
+	description = "Full Stack Developer specializing in Python, JavaScript, and modern web technologies. Experienced in building efficient web applications and software solutions.",
 	image = "/images/og-image.png",
-	article = false
+	article = false,
 } = Astro.props;
 
 // Safely get the canonical URL
-const canonicalURL = Astro.site 
+const canonicalURL = Astro.site
 	? new URL(Astro.url.pathname, Astro.site)
 	: new URL(Astro.url.pathname, Astro.url.origin);
 
-const keywords = "Josh Winningham, Full Stack Developer, Python Developer, JavaScript Developer, Web Development, Software Engineer, React, Flask, Tailwind CSS, Portfolio, Web Applications, Software Development, HTML, CSS, Git, SQL";
+const keywords =
+	"Josh Winningham, Full Stack Developer, Python Developer, JavaScript Developer, Web Development, Software Engineer, React, Flask, Tailwind CSS, Portfolio, Web Applications, Software Development, HTML, CSS, Git, SQL";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		
+
+		<!-- Theme initialization (must be in head to prevent flash) -->
+		<script is:inline>
+			const storedTheme = localStorage.getItem("color-theme");
+			const prefersDark = window.matchMedia(
+				"(prefers-color-scheme: dark)",
+			).matches;
+			if (storedTheme === "dark") {
+				document.documentElement.classList.add("dark");
+			}
+		</script>
+
 		<!-- Primary Meta Tags -->
 		<title>{title}</title>
 		<meta name="title" content={title} />
@@ -41,16 +53,19 @@ const keywords = "Josh Winningham, Full Stack Developer, Python Developer, JavaS
 		<meta name="robots" content="index, follow" />
 		<meta name="theme-color" content="#6D28D9" />
 		<meta name="format-detection" content="telephone=no" />
-		
+
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content={article ? "article" : "website"} />
 		<meta property="og:url" content={canonicalURL} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content={image} />
-		<meta property="og:site_name" content="Josh Winningham - Full Stack Developer" />
+		<meta
+			property="og:site_name"
+			content="Josh Winningham - Full Stack Developer"
+		/>
 		<meta property="og:locale" content="en_US" />
-		
+
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:url" content={canonicalURL} />
@@ -59,79 +74,129 @@ const keywords = "Josh Winningham, Full Stack Developer, Python Developer, JavaS
 		<meta property="twitter:image" content={image} />
 		<meta name="twitter:creator" content="@joshuawinningham" />
 		<meta name="twitter:site" content="@joshuawinningham" />
-		
+
 		<!-- Canonical URL -->
 		<link rel="canonical" href={canonicalURL} />
-		
+
 		<!-- Structured Data -->
-		<script type="application/ld+json" set:html={JSON.stringify({
-			"@context": "https://schema.org",
-			"@type": article ? "Article" : "Person",
-			"name": "Josh Winningham",
-			"url": canonicalURL,
-			"image": image,
-			"description": description,
-			"jobTitle": "Full Stack Developer",
-			"alumniOf": "",  // Add your education if you'd like
-			"address": {
-				"@type": "PostalAddress",
-				"addressLocality": "",  // Add your city if you'd like
-				"addressRegion": "",    // Add your state if you'd like
-				"addressCountry": "US"
-			},
-			"sameAs": [
-				"https://github.com/joshuawinningham",
-				"https://linkedin.com/in/joshuawinningham"
-			],
-			"skills": [
-				"Python",
-				"JavaScript",
-				"React",
-				"Flask",
-				"Tailwind CSS",
-				"HTML/CSS",
-				"Git",
-				"SQL",
-				"Web Development",
-				"Full Stack Development"
-			],
-			"worksFor": {
-				"@type": "Organization",
-				"name": ""  // Add your current company if you'd like
-			},
-			...(article ? {
-				"author": {
-					"@type": "Person",
-					"name": "Josh Winningham"
+		<script
+			type="application/ld+json"
+			set:html={JSON.stringify({
+				"@context": "https://schema.org",
+				"@type": article ? "Article" : "Person",
+				name: "Josh Winningham",
+				url: canonicalURL,
+				image: image,
+				description: description,
+				jobTitle: "Full Stack Developer",
+				alumniOf: "", // Add your education if you'd like
+				address: {
+					"@type": "PostalAddress",
+					addressLocality: "", // Add your city if you'd like
+					addressRegion: "", // Add your state if you'd like
+					addressCountry: "US",
 				},
-				"publisher": {
-					"@type": "Person",
-					"name": "Josh Winningham"
+				sameAs: [
+					"https://github.com/joshuawinningham",
+					"https://linkedin.com/in/joshuawinningham",
+				],
+				skills: [
+					"Python",
+					"JavaScript",
+					"React",
+					"Flask",
+					"Tailwind CSS",
+					"HTML/CSS",
+					"Git",
+					"SQL",
+					"Web Development",
+					"Full Stack Development",
+				],
+				worksFor: {
+					"@type": "Organization",
+					name: "", // Add your current company if you'd like
 				},
-				"datePublished": new Date().toISOString(),
-				"dateModified": new Date().toISOString()
-			} : {})
-		})} />
+				...(article
+					? {
+							author: {
+								"@type": "Person",
+								name: "Josh Winningham",
+							},
+							publisher: {
+								"@type": "Person",
+								name: "Josh Winningham",
+							},
+							datePublished: new Date().toISOString(),
+							dateModified: new Date().toISOString(),
+						}
+					: {}),
+			})}
+		/>
 	</head>
 	<body class="min-h-screen bg-gray-50 dark:bg-gray-900">
 		<Navigation />
-		
+
 		<main class="container mx-auto px-4 pt-24 pb-8">
 			<slot />
 		</main>
 
-		<footer class="bg-white dark:bg-gray-800 shadow-sm mt-8">
-			<div class="container mx-auto px-4 py-6">
-				<div class="flex flex-col md:flex-row md:justify-between items-center space-y-4 md:space-y-0">
-					<p class="text-gray-700 dark:text-gray-50 text-center md:text-left">© {new Date().getFullYear()} Josh Winningham. All rights reserved.</p>
-					<div class="flex space-x-4">
-						<a href="https://github.com/joshuawinningham" target="_blank" class="text-gray-700 dark:text-gray-100 hover:text-purple-600 dark:hover:text-purple-400">GitHub</a>
-						<a href="https://linkedin.com/in/joshuawinningham" target="_blank" class="text-gray-700 dark:text-gray-100 hover:text-purple-600 dark:hover:text-purple-400">LinkedIn</a>
-						<a href="mailto:joshua.winningham@gmail.com" class="text-gray-700 dark:text-gray-100 hover:text-purple-600 dark:hover:text-purple-400">Email</a>
+		<footer
+			class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-t border-gray-200 dark:border-gray-800 py-8"
+		>
+			<div class="container mx-auto px-4">
+				<div
+					class="flex flex-col md:flex-row justify-between items-center gap-4"
+				>
+					<div class="text-center md:text-left">
+						<p class="text-sm text-gray-600 dark:text-gray-400">
+							© {new Date().getFullYear()} Josh Winningham. All rights
+							reserved.
+						</p>
+					</div>
+					<div
+						class="flex items-center space-x-6 text-sm font-medium"
+					>
+						<a
+							href="#projects"
+							class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+							>Projects</a
+						>
+						<a
+							href="#about"
+							class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+							>About</a
+						>
+						<a
+							href="#contact"
+							class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+							>Contact</a
+						>
 					</div>
 				</div>
 			</div>
 		</footer>
+		<script>
+			// Scroll reveal animation
+			const observerOptions = {
+				root: null,
+				rootMargin: "0px",
+				threshold: 0.1,
+			};
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add("revealed");
+						observer.unobserve(entry.target);
+					}
+				});
+			}, observerOptions);
+
+			document.addEventListener("DOMContentLoaded", () => {
+				const revealElements = document.querySelectorAll(".reveal");
+				revealElements.forEach((el) => observer.observe(el));
+			});
+		</script>
 	</body>
 </html>
 
