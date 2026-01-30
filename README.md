@@ -58,4 +58,4 @@ npm run preview
 ```
 
 ---
-© 2024 Josh Winningham. All rights reserved.
+© 2026 Josh Winningham. All rights reserved.
