@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import orderTracker from "../assets/inventory-order-tracker.png";
 import itsAnArtParty from "../assets/its_an_art_party.png";
 import project5 from "../assets/project5.png";
 import project4 from "../assets/project4.png";
@@ -105,9 +106,85 @@ const allTechColors: TechColors = {
 		bg: "bg-pink-100 dark:bg-pink-900",
 		text: "text-pink-800 dark:text-pink-200",
 	},
+	"C#": {
+		bg: "bg-violet-100 dark:bg-violet-900",
+		text: "text-violet-800 dark:text-violet-200",
+	},
+	"ASP.NET Core": {
+		bg: "bg-indigo-100 dark:bg-indigo-900",
+		text: "text-indigo-800 dark:text-indigo-200",
+	},
+	"Entity Framework": {
+		bg: "bg-rose-100 dark:bg-rose-900",
+		text: "text-rose-800 dark:text-rose-200",
+	},
+	"SQL Server": {
+		bg: "bg-red-100 dark:bg-red-900",
+		text: "text-red-800 dark:text-red-200",
+	},
+	AWS: {
+		bg: "bg-amber-100 dark:bg-amber-900",
+		text: "text-amber-800 dark:text-amber-200",
+	},
 };
 
 const projects: Project[] = [
+	{
+		title: "Inventory & Order Tracker",
+		description:
+			"A full-stack B2B inventory management and order fulfillment system. Features product CRUD with SKU tracking, order workflow (Pending → Processing → Shipped → Delivered) with strict status enforcement, automatic stock deduction, low-stock alerts, and a complete audit trail. Deployed on AWS with App Runner, RDS, and CloudFront.",
+		image: orderTracker.src,
+		fallbackImage:
+			"https://images.pexels.com/photos/7376/startup-photos.jpg",
+		technologies: [
+			"C#",
+			"ASP.NET Core",
+			"Entity Framework",
+			"SQL Server",
+			"React",
+			"TypeScript",
+			"Tailwind CSS",
+			"AWS",
+		],
+		techColors: {
+			"C#": {
+				bg: "bg-violet-100 dark:bg-violet-900",
+				text: "text-violet-800 dark:text-violet-200",
+			},
+			"ASP.NET Core": {
+				bg: "bg-indigo-100 dark:bg-indigo-900",
+				text: "text-indigo-800 dark:text-indigo-200",
+			},
+			"Entity Framework": {
+				bg: "bg-rose-100 dark:bg-rose-900",
+				text: "text-rose-800 dark:text-rose-200",
+			},
+			"SQL Server": {
+				bg: "bg-red-100 dark:bg-red-900",
+				text: "text-red-800 dark:text-red-200",
+			},
+			React: {
+				bg: "bg-cyan-100 dark:bg-cyan-900",
+				text: "text-cyan-800 dark:text-cyan-200",
+			},
+			TypeScript: {
+				bg: "bg-blue-100 dark:bg-blue-900",
+				text: "text-blue-800 dark:text-blue-200",
+			},
+			"Tailwind CSS": {
+				bg: "bg-teal-100 dark:bg-teal-900",
+				text: "text-teal-800 dark:text-teal-200",
+			},
+			AWS: {
+				bg: "bg-amber-100 dark:bg-amber-900",
+				text: "text-amber-800 dark:text-amber-200",
+			},
+		},
+		links: {
+			github: "https://github.com/joshuawinningham/inventory-order-tracker",
+			live: "https://d1t1jyx1chuvoh.cloudfront.net",
+		},
+	},
 	{
 		title: "Email KPI Dashboard",
 		description:
@@ -517,15 +594,16 @@ const projects: Project[] = [
 						<div class="flex flex-wrap gap-2">
 							{
 								[
+									"C#",
+									"ASP.NET Core",
+									"Entity Framework",
+									"SQL Server",
 									"Node.js",
 									"Fastify",
 									"Python",
 									"Flask",
-									"WordPress",
 									"Supabase",
-									"Google APIs",
-									"Resend",
-									"Render",
+									"AWS",
 								].map((tech) => (
 									<span
 										class={`px-3 py-1 rounded-full text-sm font-medium ${allTechColors[tech].bg} ${allTechColors[tech].text}`}
