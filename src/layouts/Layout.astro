@@ -11,7 +11,7 @@ interface Props {
 
 const {
 	title,
-	description = "Full Stack Developer specializing in Python, JavaScript, and modern web technologies. Experienced in building efficient web applications and software solutions.",
+	description = "Full Stack Developer & SEO Specialist specializing in Python, JavaScript, and modern web technologies. Experienced in building efficient web applications and software solutions.",
 	image = "/images/og-image.png",
 	article = false,
 } = Astro.props;
@@ -22,7 +22,7 @@ const canonicalURL = Astro.site
 	: new URL(Astro.url.pathname, Astro.url.origin);
 
 const keywords =
-	"Josh Winningham, Full Stack Developer, Python Developer, JavaScript Developer, Web Development, Software Engineer, React, Flask, Tailwind CSS, Portfolio, Web Applications, Software Development, HTML, CSS, Git, SQL";
+	"Josh Winningham, Full Stack Developer & SEO Specialist, Python Developer, JavaScript Developer, Web Development, Software Engineer, React, Flask, Tailwind CSS, Portfolio, Web Applications, Software Development, HTML, CSS, Git, SQL";
 ---
 
 <!doctype html>
@@ -62,7 +62,7 @@ const keywords =
 		<meta property="og:image" content={image} />
 		<meta
 			property="og:site_name"
-			content="Josh Winningham - Full Stack Developer"
+			content="Josh Winningham - Full Stack Developer & SEO Specialist"
 		/>
 		<meta property="og:locale" content="en_US" />
 
@@ -88,7 +88,7 @@ const keywords =
 				url: canonicalURL,
 				image: image,
 				description: description,
-				jobTitle: "Full Stack Developer",
+				jobTitle: "Full Stack Developer & SEO Specialist",
 				alumniOf: "", // Add your education if you'd like
 				address: {
 					"@type": "PostalAddress",

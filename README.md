@@ -1,6 +1,6 @@
 # Josh Winningham's Portfolio
 
-A modern, responsive portfolio website built with Astro and Tailwind CSS, showcasing my projects and skills as a Full Stack Developer.
+A modern, responsive portfolio website built with Astro and Tailwind CSS, showcasing my projects and skills as a Full Stack Developer & SEO Specialist.
 
 ## 🚀 Features
 
