@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import orderTracker from "../assets/inventory-order-tracker.png";
 import itsAnArtParty from "../assets/its_an_art_party.png";
 import itsAnArtPartyWP from "../assets/its-an-art-party-wp.png";
+import seoAuditDashboard from "../assets/seo-audit-dashboard.png";
 import project5 from "../assets/project5.png";
 import project4 from "../assets/project4.png";
 import project3 from "../assets/project3.png";
@@ -135,6 +136,18 @@ const allTechColors: TechColors = {
 		bg: "bg-amber-100 dark:bg-amber-900",
 		text: "text-amber-800 dark:text-amber-200",
 	},
+	"Next.js": {
+		bg: "bg-gray-100 dark:bg-gray-900",
+		text: "text-gray-800 dark:text-gray-200",
+	},
+	Cheerio: {
+		bg: "bg-orange-100 dark:bg-orange-900",
+		text: "text-orange-800 dark:text-orange-200",
+	},
+	Recharts: {
+		bg: "bg-green-100 dark:bg-green-900",
+		text: "text-green-800 dark:text-green-200",
+	},
 };
 
 const projects: Project[] = [
@@ -192,6 +205,57 @@ const projects: Project[] = [
 		links: {
 			github: "https://github.com/joshuawinningham/inventory-order-tracker",
 			live: "https://d1t1jyx1chuvoh.cloudfront.net",
+		},
+	},
+	{
+		title: "SEO Audit Dashboard",
+		description:
+			"A comprehensive SEO analysis tool that audits any URL across 9 dimensions: meta tags, headings, images, links, structured data, content readability, hreflang, canonical/indexability, and Core Web Vitals. Features progressive loading with React Suspense, weighted scoring, Flesch-Kincaid readability analysis, and actionable recommendations.",
+		image: seoAuditDashboard.src,
+		fallbackImage:
+			"https://images.pexels.com/photos/7376/startup-photos.jpg",
+		technologies: [
+			"Next.js",
+			"React",
+			"TypeScript",
+			"Tailwind CSS",
+			"Cheerio",
+			"Recharts",
+			"Vercel",
+		],
+		techColors: {
+			"Next.js": {
+				bg: "bg-gray-100 dark:bg-gray-900",
+				text: "text-gray-800 dark:text-gray-200",
+			},
+			React: {
+				bg: "bg-cyan-100 dark:bg-cyan-900",
+				text: "text-cyan-800 dark:text-cyan-200",
+			},
+			TypeScript: {
+				bg: "bg-blue-100 dark:bg-blue-900",
+				text: "text-blue-800 dark:text-blue-200",
+			},
+			"Tailwind CSS": {
+				bg: "bg-teal-100 dark:bg-teal-900",
+				text: "text-teal-800 dark:text-teal-200",
+			},
+			Cheerio: {
+				bg: "bg-orange-100 dark:bg-orange-900",
+				text: "text-orange-800 dark:text-orange-200",
+			},
+			Recharts: {
+				bg: "bg-green-100 dark:bg-green-900",
+				text: "text-green-800 dark:text-green-200",
+			},
+			Vercel: {
+				bg: "bg-gray-100 dark:bg-gray-900",
+				text: "text-gray-800 dark:text-gray-200",
+			},
+		},
+		links: {
+			github: "https://github.com/joshuawinningham/seo-audit-dashboard",
+			live: "https://seo-audit-dashboard-pi.vercel.app/",
 		},
 	},
 	{
