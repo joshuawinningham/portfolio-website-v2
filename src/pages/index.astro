@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import orderTracker from "../assets/inventory-order-tracker.png";
 import itsAnArtParty from "../assets/its_an_art_party.png";
 import itsAnArtPartyWP from "../assets/its-an-art-party-wp.png";
+import itsAnArtPartyNextjs from "../assets/its-an-art-party-nextjs.png";
 import seoAuditDashboard from "../assets/seo-audit-dashboard.png";
 import project5 from "../assets/project5.png";
 import project4 from "../assets/project4.png";
@@ -362,44 +363,44 @@ const projects: Project[] = [
 		},
 	},
 	{
-		title: "It's an Art Party — Custom WordPress Theme",
+		title: "It's an Art Party — Next.js",
 		description:
-			"A custom WordPress theme for a mobile art and canvas painting party business in Charlotte, NC. Features client-editable content via Secure Custom Fields, custom page templates, a REST API contact form with inquiry tracking, scroll animations, and a vibrant brand design system. Built on the Underscores starter theme with Tailwind CSS.",
-		image: itsAnArtPartyWP.src,
+			"A full rebuild of the It's an Art Party website using Next.js 16 with the App Router. Features static site generation, a contact form powered by Resend, blog with hardcoded posts migrated from WordPress, scroll animations, SEO with JSON-LD structured data, dynamic sitemap, and per-page Open Graph metadata. Deployed on Vercel.",
+		image: itsAnArtPartyNextjs.src,
 		fallbackImage:
 			"https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg",
 		technologies: [
-			"WordPress",
-			"PHP",
+			"Next.js",
+			"TypeScript",
 			"Tailwind CSS",
-			"JavaScript",
-			"MySQL",
+			"Resend",
+			"Vercel",
 		],
 		techColors: {
-			WordPress: {
-				bg: "bg-sky-100 dark:bg-sky-900",
-				text: "text-sky-800 dark:text-sky-200",
+			"Next.js": {
+				bg: "bg-gray-100 dark:bg-gray-900",
+				text: "text-gray-800 dark:text-gray-200",
 			},
-			PHP: {
-				bg: "bg-indigo-100 dark:bg-indigo-900",
-				text: "text-indigo-800 dark:text-indigo-200",
+			TypeScript: {
+				bg: "bg-blue-100 dark:bg-blue-900",
+				text: "text-blue-800 dark:text-blue-200",
 			},
 			"Tailwind CSS": {
 				bg: "bg-teal-100 dark:bg-teal-900",
 				text: "text-teal-800 dark:text-teal-200",
 			},
-			JavaScript: {
-				bg: "bg-yellow-100 dark:bg-yellow-900",
-				text: "text-yellow-800 dark:text-yellow-200",
+			Resend: {
+				bg: "bg-purple-100 dark:bg-purple-900",
+				text: "text-purple-800 dark:text-purple-200",
 			},
-			MySQL: {
-				bg: "bg-orange-100 dark:bg-orange-900",
-				text: "text-orange-800 dark:text-orange-200",
+			Vercel: {
+				bg: "bg-gray-100 dark:bg-gray-900",
+				text: "text-gray-800 dark:text-gray-200",
 			},
 		},
 		links: {
-			github: "https://github.com/joshuawinningham/its-an-art-party-wp",
-			live: "https://itsanartparty.com/",
+			github: "https://github.com/joshuawinningham/its-an-art-party-nextjs",
+			live: "https://www.itsanartparty.com/",
 		},
 	},
 	{
@@ -446,6 +447,47 @@ const projects: Project[] = [
 		links: {
 			github: "https://github.com/joshuawinningham/its-an-art-party",
 			live: "https://its-an-art-party.vercel.app/",
+		},
+	},
+	{
+		title: "It's an Art Party — Custom WordPress Theme",
+		description:
+			"A custom WordPress theme for a mobile art and canvas painting party business in Charlotte, NC. Features client-editable content via Secure Custom Fields, custom page templates, a REST API contact form with inquiry tracking, scroll animations, and a vibrant brand design system. Built on the Underscores starter theme with Tailwind CSS.",
+		image: itsAnArtPartyWP.src,
+		fallbackImage:
+			"https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg",
+		technologies: [
+			"WordPress",
+			"PHP",
+			"Tailwind CSS",
+			"JavaScript",
+			"MySQL",
+		],
+		techColors: {
+			WordPress: {
+				bg: "bg-sky-100 dark:bg-sky-900",
+				text: "text-sky-800 dark:text-sky-200",
+			},
+			PHP: {
+				bg: "bg-indigo-100 dark:bg-indigo-900",
+				text: "text-indigo-800 dark:text-indigo-200",
+			},
+			"Tailwind CSS": {
+				bg: "bg-teal-100 dark:bg-teal-900",
+				text: "text-teal-800 dark:text-teal-200",
+			},
+			JavaScript: {
+				bg: "bg-yellow-100 dark:bg-yellow-900",
+				text: "text-yellow-800 dark:text-yellow-200",
+			},
+			MySQL: {
+				bg: "bg-orange-100 dark:bg-orange-900",
+				text: "text-orange-800 dark:text-orange-200",
+			},
+		},
+		links: {
+			github: "https://github.com/joshuawinningham/its-an-art-party-wp",
+			live: "https://itsanartparty.com/",
 		},
 	},
 	{
