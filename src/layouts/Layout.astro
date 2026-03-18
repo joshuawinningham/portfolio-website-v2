@@ -36,10 +36,9 @@ const keywords =
 		<!-- Theme initialization (must be in head to prevent flash) -->
 		<script is:inline>
 			const storedTheme = localStorage.getItem("color-theme");
-			const prefersDark = window.matchMedia(
-				"(prefers-color-scheme: dark)",
-			).matches;
-			if (storedTheme === "dark") {
+			if (storedTheme === "light") {
+				document.documentElement.classList.remove("dark");
+			} else {
 				document.documentElement.classList.add("dark");
 			}
 		</script>
@@ -51,7 +50,10 @@ const keywords =
 		<meta name="author" content="Josh Winningham" />
 		<meta name="keywords" content={keywords} />
 		<meta name="robots" content="index, follow" />
-		<meta name="theme-color" content="#6D28D9" />
+		<meta name="theme-color" content="#22C55E" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
 		<meta name="format-detection" content="telephone=no" />
 
 		<!-- Open Graph / Facebook -->
@@ -136,23 +138,20 @@ const keywords =
 	<body class="min-h-screen bg-gray-50 dark:bg-gray-900">
 		<Navigation />
 
-		<main class="container mx-auto px-4 pt-24 pb-8">
+		<main>
 			<slot />
 		</main>
 
 		<footer
-			class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-t border-gray-200 dark:border-gray-800 py-8"
+			class="bg-white/60 dark:bg-gray-900/60 backdrop-blur-md border-t border-gray-200 dark:border-gray-800 py-8"
 		>
-			<div class="container mx-auto px-4">
+			<div class="max-w-screen-xl mx-auto px-4">
 				<div
 					class="flex flex-col md:flex-row justify-between items-center gap-4"
 				>
-					<div class="text-center md:text-left">
-						<p class="text-sm text-gray-600 dark:text-gray-400">
-							© {new Date().getFullYear()} Josh Winningham. All rights
-							reserved.
-						</p>
-					</div>
+					<p class="text-sm text-gray-500 dark:text-gray-400">
+						© {new Date().getFullYear()} Josh Winningham. All rights reserved.
+					</p>
 					<div
 						class="flex items-center space-x-6 text-sm font-medium"
 					>
@@ -170,6 +169,11 @@ const keywords =
 							href="#contact"
 							class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
 							>Contact</a
+						>
+						<a
+							href="#"
+							class="text-gray-400 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
+							aria-label="Back to top">&uarr; Top</a
 						>
 					</div>
 				</div>
