@@ -126,10 +126,10 @@
 
   function initializeTheme() {
     const storedTheme = localStorage.getItem("color-theme");
-    if (storedTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
+    if (storedTheme === "light") {
       document.documentElement.classList.remove("dark");
+    } else {
+      document.documentElement.classList.add("dark");
     }
     updateThemeIcons();
   }
