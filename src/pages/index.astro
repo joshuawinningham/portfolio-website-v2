@@ -691,7 +691,7 @@ const projects: Project[] = [
 								<div class="flex flex-wrap gap-2 mb-6">
 									{project.technologies.map((tech) => (
 										<span
-											class={`px-3 py-1 rounded-full text-sm font-medium ${project.techColors[tech].bg} ${project.techColors[tech].text}`}
+											class={`tech-pill px-3 py-1 rounded-full text-sm font-medium border border-black/5 dark:border-white/10 shadow-sm ${project.techColors[tech].bg} ${project.techColors[tech].text}`}
 										>
 											{tech}
 										</span>
@@ -750,7 +750,7 @@ const projects: Project[] = [
 									<div class="flex flex-wrap gap-1.5 mb-4">
 										{project.technologies.map((tech) => (
 											<span
-												class={`px-2.5 py-0.5 rounded-full text-xs font-medium ${project.techColors[tech].bg} ${project.techColors[tech].text}`}
+												class={`tech-pill px-2.5 py-0.5 rounded-full text-xs font-medium border border-black/5 dark:border-white/10 shadow-sm ${project.techColors[tech].bg} ${project.techColors[tech].text}`}
 											>
 												{tech}
 											</span>
@@ -820,7 +820,7 @@ const projects: Project[] = [
 									"Vercel",
 								].map((tech) => (
 									<span
-										class={`px-3 py-1 rounded-full text-sm font-medium ${allTechColors[tech].bg} ${allTechColors[tech].text}`}
+										class={`tech-pill px-3 py-1 rounded-full text-sm font-medium border border-black/5 dark:border-white/10 shadow-sm ${allTechColors[tech].bg} ${allTechColors[tech].text}`}
 									>
 										{tech}
 									</span>
@@ -857,7 +857,7 @@ const projects: Project[] = [
 									"AWS",
 								].map((tech) => (
 									<span
-										class={`px-3 py-1 rounded-full text-sm font-medium ${allTechColors[tech].bg} ${allTechColors[tech].text}`}
+										class={`tech-pill px-3 py-1 rounded-full text-sm font-medium border border-black/5 dark:border-white/10 shadow-sm ${allTechColors[tech].bg} ${allTechColors[tech].text}`}
 									>
 										{tech}
 									</span>
