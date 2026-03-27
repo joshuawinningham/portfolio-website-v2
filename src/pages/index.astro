@@ -10,6 +10,7 @@ import project4 from "../assets/project4.png";
 import project3 from "../assets/project3.png";
 import project2 from "../assets/project2.png";
 import project1 from "../assets/project1.png";
+import scaleVisibility from "../assets/scale-visibility.png";
 
 interface TechColor {
 	bg: string;
@@ -98,8 +99,8 @@ const allTechColors: TechColors = {
 		text: "text-yellow-800 dark:text-yellow-100",
 	},
 	Vercel: {
-		bg: "bg-gray-100 dark:bg-gray-800",
-		text: "text-gray-800 dark:text-gray-200",
+		bg: "bg-slate-100 dark:bg-slate-600",
+		text: "text-slate-800 dark:text-slate-100",
 	},
 	Python: {
 		bg: "bg-blue-100 dark:bg-blue-800",
@@ -138,8 +139,8 @@ const allTechColors: TechColors = {
 		text: "text-amber-800 dark:text-amber-100",
 	},
 	"Next.js": {
-		bg: "bg-gray-100 dark:bg-gray-800",
-		text: "text-gray-800 dark:text-gray-200",
+		bg: "bg-slate-100 dark:bg-slate-600",
+		text: "text-slate-800 dark:text-slate-100",
 	},
 	Cheerio: {
 		bg: "bg-orange-100 dark:bg-orange-800",
@@ -242,8 +243,8 @@ const projects: Project[] = [
 		],
 		techColors: {
 			"Next.js": {
-				bg: "bg-gray-100 dark:bg-gray-800",
-				text: "text-gray-800 dark:text-gray-200",
+				bg: "bg-slate-100 dark:bg-slate-600",
+				text: "text-slate-800 dark:text-slate-100",
 			},
 			React: {
 				bg: "bg-cyan-100 dark:bg-cyan-800",
@@ -266,8 +267,8 @@ const projects: Project[] = [
 				text: "text-green-800 dark:text-green-100",
 			},
 			Vercel: {
-				bg: "bg-gray-100 dark:bg-gray-800",
-				text: "text-gray-800 dark:text-gray-200",
+				bg: "bg-slate-100 dark:bg-slate-600",
+				text: "text-slate-800 dark:text-slate-100",
 			},
 		},
 		links: {
@@ -356,8 +357,8 @@ const projects: Project[] = [
 		],
 		techColors: {
 			"Next.js": {
-				bg: "bg-gray-100 dark:bg-gray-800",
-				text: "text-gray-800 dark:text-gray-200",
+				bg: "bg-slate-100 dark:bg-slate-600",
+				text: "text-slate-800 dark:text-slate-100",
 			},
 			TypeScript: {
 				bg: "bg-blue-100 dark:bg-blue-800",
@@ -384,13 +385,49 @@ const projects: Project[] = [
 				text: "text-sky-800 dark:text-sky-100",
 			},
 			Vercel: {
-				bg: "bg-gray-100 dark:bg-gray-800",
-				text: "text-gray-800 dark:text-gray-200",
+				bg: "bg-slate-100 dark:bg-slate-600",
+				text: "text-slate-800 dark:text-slate-100",
 			},
 		},
 		links: {
 			github: "https://github.com/joshuawinningham/its-an-art-party-nextjs",
 			live: "https://www.itsanartparty.com/",
+		},
+	},
+	{
+		title: "ScaleVisibility — Web Design Agency",
+		description:
+			"A modern web design agency website built with Astro. Features a teal/dark theme with glass-morphism effects, animated mesh gradient backgrounds, scroll-reveal animations, dark/light mode toggle, client logo marquee, WordPress vs Next.js case study with real PageSpeed data, and a contact form. Optimized for SEO and AI search visibility.",
+		image: scaleVisibility.src,
+		fallbackImage:
+			"https://images.pexels.com/photos/7376/startup-photos.jpg",
+		technologies: [
+			"Astro",
+			"TypeScript",
+			"Tailwind CSS",
+			"Vercel",
+		],
+		techColors: {
+			Astro: {
+				bg: "bg-purple-100 dark:bg-purple-800",
+				text: "text-purple-800 dark:text-purple-100",
+			},
+			TypeScript: {
+				bg: "bg-blue-100 dark:bg-blue-800",
+				text: "text-blue-800 dark:text-blue-100",
+			},
+			"Tailwind CSS": {
+				bg: "bg-teal-100 dark:bg-teal-800",
+				text: "text-teal-800 dark:text-teal-100",
+			},
+			Vercel: {
+				bg: "bg-slate-100 dark:bg-slate-600",
+				text: "text-slate-800 dark:text-slate-100",
+			},
+		},
+		links: {
+			github: "https://github.com/joshuawinningham/scale-visibility",
+			live: "https://www.scalevisibility.com/",
 		},
 	},
 	{
@@ -471,8 +508,8 @@ const projects: Project[] = [
 				text: "text-teal-800 dark:text-teal-100",
 			},
 			Vercel: {
-				bg: "bg-gray-100 dark:bg-gray-800",
-				text: "text-gray-800 dark:text-gray-200",
+				bg: "bg-slate-100 dark:bg-slate-600",
+				text: "text-slate-800 dark:text-slate-100",
 			},
 		},
 		links: {
@@ -657,7 +694,7 @@ const projects: Project[] = [
 			<!-- Featured Projects (full-width alternating) -->
 			<div class="grid grid-cols-1 gap-12">
 				{
-					projects.slice(0, 4).map((project, index) => (
+					projects.slice(0, 5).map((project, index) => (
 						<div class="flex flex-col md:flex-row gap-8 items-center reveal">
 							<div
 								class={`w-full md:w-1/2 ${index % 2 === 1 ? "md:order-2" : ""}`}
@@ -727,7 +764,7 @@ const projects: Project[] = [
 			<h3 class="text-xl font-semibold text-center mt-20 mb-10 text-gray-400 dark:text-gray-500 reveal">More Projects</h3>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-children">
 				{
-					projects.slice(4).map((project) => (
+					projects.slice(5).map((project) => (
 						<div class="reveal">
 							<div class="project-card rounded-xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 h-full flex flex-col">
 								<div class="h-8 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 flex items-center px-4 space-x-2">
