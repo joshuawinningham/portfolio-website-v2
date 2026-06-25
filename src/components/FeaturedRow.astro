@@ -1,0 +1,186 @@
+---
+import { Image } from "astro:assets";
+import Icon from "./Icon.astro";
+import type { Project } from "../data/projects";
+
+interface Props {
+	project: Project;
+	/** Zero-based position among featured rows — drives the alternating layout. */
+	index: number;
+}
+
+const { project, index } = Astro.props;
+const num = String(index + 1).padStart(2, "0");
+const flipped = index % 2 === 1;
+// Text on the left for even rows, on the right for odd rows.
+const orderText = flipped ? 2 : 1;
+const orderImg = flipped ? 1 : 2;
+---
+
+<article data-r="featured-row" data-reveal class="featured-row">
+	<div class="featured-copy" style={`order:${orderText}`}>
+		<div class="featured-head">
+			<span class="featured-num">{num}</span>
+			<span class="featured-pill">Featured · {project.tag}</span>
+		</div>
+		<h3 class="featured-title">{project.title}</h3>
+		<p class="featured-blurb">{project.blurb}</p>
+		<div class="chip-row">
+			{project.tech.map((t) => <span class="tech-chip">{t}</span>)}
+		</div>
+		<div class="featured-links">
+			<a href={project.github} target="_blank" rel="noopener noreferrer" class="lnk-muted">
+				<Icon name="github" size={16} aria-hidden="true" /> View code
+			</a>
+			<a href={project.live} target="_blank" rel="noopener noreferrer" class="lnk-accent">
+				Live demo <span>→</span>
+			</a>
+		</div>
+	</div>
+	<div class="featured-shot" style={`order:${orderImg}`}>
+		<div class="browser-bar">
+			<span class="dot dot-red"></span>
+			<span class="dot dot-yellow"></span>
+			<span class="dot dot-green"></span>
+		</div>
+		<div class="featured-screen">
+			{project.image && <Image src={project.image} alt={project.title} loading="lazy" />}
+		</div>
+	</div>
+</article>
+
+<style>
+	.featured-row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 52px;
+		align-items: center;
+	}
+	.featured-copy {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+	.featured-head {
+		display: flex;
+		align-items: baseline;
+		gap: 14px;
+	}
+	.featured-num {
+		font-family: "Newsreader", serif;
+		font-size: 40px;
+		line-height: 1;
+		color: var(--accent);
+		font-style: italic;
+	}
+	.featured-pill {
+		font-size: 11px;
+		font-weight: 700;
+		letter-spacing: 0.13em;
+		text-transform: uppercase;
+		color: var(--primary);
+		padding: 4px 10px;
+		border: 1px solid var(--chip-line);
+		border-radius: 999px;
+	}
+	.featured-title {
+		font-family: "Newsreader", serif;
+		font-size: clamp(28px, 3.2vw, 38px);
+		font-weight: 500;
+		letter-spacing: -0.015em;
+		line-height: 1.08;
+		margin: 0;
+	}
+	.featured-blurb {
+		font-size: 16px;
+		line-height: 1.6;
+		color: var(--fg2);
+		margin: 0;
+		max-width: 46ch;
+	}
+	.chip-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 7px;
+		margin-top: 2px;
+	}
+	.tech-chip {
+		font-family: "JetBrains Mono", monospace;
+		font-size: 11px;
+		color: var(--chip-ink);
+		background: var(--chip-bg);
+		border: 1px solid var(--chip-line);
+		border-radius: 999px;
+		padding: 4px 11px;
+	}
+	.featured-links {
+		display: flex;
+		gap: 20px;
+		margin-top: 8px;
+	}
+	.lnk-muted {
+		display: inline-flex;
+		align-items: center;
+		gap: 7px;
+		font-size: 14px;
+		font-weight: 600;
+		color: var(--fg2);
+		text-decoration: none;
+	}
+	.lnk-muted:hover {
+		color: var(--ink);
+	}
+	.lnk-accent {
+		display: inline-flex;
+		align-items: center;
+		gap: 7px;
+		font-size: 14px;
+		font-weight: 600;
+		color: var(--accent);
+		text-decoration: none;
+	}
+	.lnk-accent:hover {
+		color: var(--accent-bright);
+	}
+	.featured-shot {
+		border-radius: 14px;
+		overflow: hidden;
+		background: var(--card);
+		border: 1px solid var(--line);
+		box-shadow: var(--shadow-lift);
+	}
+	.browser-bar {
+		height: 34px;
+		background: var(--chrome);
+		border-bottom: 1px solid var(--line);
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		padding: 0 13px;
+	}
+	.dot {
+		width: 9px;
+		height: 9px;
+		border-radius: 50%;
+	}
+	.dot-red {
+		background: #e8533c;
+	}
+	.dot-yellow {
+		background: #d4a23a;
+	}
+	.dot-green {
+		background: #3da858;
+	}
+	.featured-screen {
+		aspect-ratio: 16 / 10;
+		overflow: hidden;
+		background-color: var(--bg);
+	}
+	.featured-screen :global(img) {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: top center;
+	}
+</style>
