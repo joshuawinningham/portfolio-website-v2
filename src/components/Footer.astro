@@ -1,0 +1,108 @@
+---
+import Icon from "./Icon.astro";
+---
+
+<footer class="site-footer">
+	<div data-r="footer-inner" class="footer-inner">
+		<div data-r="footer-grid" class="footer-grid">
+			<div class="footer-brand">
+				<span class="footer-name">Josh Winningham</span>
+				<p class="footer-tagline">
+					Full-Stack Developer &amp; SEO Specialist building production-ready web
+					applications.
+				</p>
+			</div>
+			<div class="footer-col">
+				<div class="footer-head">Explore</div>
+				<a href="#work" class="foot-lnk">Work</a>
+				<a href="#about" class="foot-lnk">About</a>
+				<a href="#contact" class="foot-lnk">Contact</a>
+			</div>
+			<div class="footer-col">
+				<div class="footer-head">Connect</div>
+				<a href="https://github.com/joshuawinningham" target="_blank" rel="noopener noreferrer" class="foot-lnk">
+					<Icon name="github" size={15} aria-hidden="true" /> GitHub
+				</a>
+				<a href="https://linkedin.com/in/joshuawinningham" target="_blank" rel="noopener noreferrer" class="foot-lnk">
+					<Icon name="linkedin" size={15} aria-hidden="true" /> LinkedIn
+				</a>
+				<a href="mailto:joshua.winningham@gmail.com" class="foot-lnk">
+					<Icon name="mail" size={15} aria-hidden="true" /> Email
+				</a>
+			</div>
+		</div>
+		<div data-r="contact-foot" class="footer-colophon">
+			<span>© 2026 Josh Winningham</span>
+			<span>Set in Newsreader &amp; Hanken Grotesk</span>
+		</div>
+	</div>
+</footer>
+
+<style>
+	.site-footer {
+		background: var(--footer-bg);
+		color: var(--footer-ink);
+	}
+	.footer-inner {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 64px 32px 36px;
+	}
+	.footer-grid {
+		display: grid;
+		grid-template-columns: 1.5fr 1fr 1fr;
+		gap: 48px;
+	}
+	.footer-brand {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+	}
+	.footer-name {
+		font-size: 16px;
+		font-weight: 700;
+	}
+	.footer-tagline {
+		font-size: 13.5px;
+		line-height: 1.6;
+		color: rgba(244, 236, 216, 0.6);
+		margin: 0;
+		max-width: 34ch;
+	}
+	.footer-col {
+		display: flex;
+		flex-direction: column;
+		gap: 11px;
+	}
+	.footer-head {
+		font-size: 11px;
+		font-weight: 600;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: rgba(244, 236, 216, 0.5);
+		margin-bottom: 4px;
+	}
+	.foot-lnk {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		font-size: 14px;
+		color: var(--footer-ink);
+		text-decoration: none;
+	}
+	.foot-lnk:hover {
+		color: #7bc58a;
+	}
+	.footer-colophon {
+		margin-top: 46px;
+		padding-top: 22px;
+		border-top: 1px solid rgba(244, 236, 216, 0.12);
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 12px;
+		font-family: "JetBrains Mono", monospace;
+		font-size: 11px;
+		color: rgba(244, 236, 216, 0.5);
+	}
+</style>

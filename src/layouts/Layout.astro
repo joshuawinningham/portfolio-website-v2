@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
-import Navigation from "../components/Navigation.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
 	title: string;
@@ -11,7 +12,7 @@ interface Props {
 
 const {
 	title,
-	description = "Full Stack Developer & SEO Specialist specializing in Python, JavaScript, and modern web technologies. Experienced in building efficient web applications and software solutions.",
+	description = "Full Stack Developer & SEO Specialist specializing in React, Next.js, .NET and modern web technologies. Building efficient, production-ready web applications.",
 	image = "/images/og-image.png",
 	article = false,
 } = Astro.props;
@@ -22,7 +23,7 @@ const canonicalURL = Astro.site
 	: new URL(Astro.url.pathname, Astro.url.origin);
 
 const keywords =
-	"Josh Winningham, Full Stack Developer & SEO Specialist, Python Developer, JavaScript Developer, Web Development, Software Engineer, React, Flask, Tailwind CSS, Portfolio, Web Applications, Software Development, HTML, CSS, Git, SQL";
+	"Josh Winningham, Full Stack Developer & SEO Specialist, React, Next.js, ASP.NET Core, Astro, TypeScript, Web Development, Software Engineer, Portfolio, Web Applications, SEO";
 ---
 
 <!doctype html>
@@ -33,14 +34,13 @@ const keywords =
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 
-		<!-- Theme initialization (must be in head to prevent flash) -->
+		<!-- Theme initialization (must run before paint to avoid a flash) -->
 		<script is:inline>
-			const storedTheme = localStorage.getItem("color-theme");
-			if (storedTheme === "light") {
-				document.documentElement.classList.remove("dark");
-			} else {
-				document.documentElement.classList.add("dark");
-			}
+			const stored = localStorage.getItem("jw-theme");
+			document.documentElement.setAttribute(
+				"data-theme",
+				stored === "dark" ? "dark" : "light",
+			);
 		</script>
 
 		<!-- Primary Meta Tags -->
@@ -50,10 +50,15 @@ const keywords =
 		<meta name="author" content="Josh Winningham" />
 		<meta name="keywords" content={keywords} />
 		<meta name="robots" content="index, follow" />
-		<meta name="theme-color" content="#22C55E" />
+		<meta name="theme-color" content="#1F6B3E" />
+
+		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Hanken+Grotesk:wght@300..800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
 		<meta name="format-detection" content="telephone=no" />
 
 		<!-- Open Graph / Facebook -->
@@ -91,124 +96,99 @@ const keywords =
 				image: image,
 				description: description,
 				jobTitle: "Full Stack Developer & SEO Specialist",
-				alumniOf: "", // Add your education if you'd like
-				address: {
-					"@type": "PostalAddress",
-					addressLocality: "", // Add your city if you'd like
-					addressRegion: "", // Add your state if you'd like
-					addressCountry: "US",
-				},
 				sameAs: [
 					"https://github.com/joshuawinningham",
 					"https://linkedin.com/in/joshuawinningham",
 				],
 				skills: [
-					"Python",
-					"JavaScript",
 					"React",
-					"Flask",
-					"Tailwind CSS",
-					"HTML/CSS",
-					"Git",
-					"SQL",
-					"Web Development",
+					"Next.js",
+					"TypeScript",
+					"ASP.NET Core",
+					"Astro",
+					"Python",
+					"AWS",
+					"SEO",
 					"Full Stack Development",
 				],
-				worksFor: {
-					"@type": "Organization",
-					name: "", // Add your current company if you'd like
-				},
-				...(article
-					? {
-							author: {
-								"@type": "Person",
-								name: "Josh Winningham",
-							},
-							publisher: {
-								"@type": "Person",
-								name: "Josh Winningham",
-							},
-							datePublished: new Date().toISOString(),
-							dateModified: new Date().toISOString(),
-						}
-					: {}),
 			})}
 		/>
 	</head>
-	<body class="min-h-screen bg-gray-50 dark:bg-gray-900">
-		<Navigation />
-
+	<body>
+		<Header />
 		<main>
 			<slot />
 		</main>
+		<Footer />
 
-		<footer
-			class="bg-white/60 dark:bg-gray-900/60 backdrop-blur-md border-t border-gray-200 dark:border-gray-800 py-8"
-		>
-			<div class="max-w-screen-xl mx-auto px-4">
-				<div
-					class="flex flex-col md:flex-row justify-between items-center gap-4"
-				>
-					<p class="text-sm text-gray-500 dark:text-gray-400">
-						© {new Date().getFullYear()} Josh Winningham. All rights reserved.
-					</p>
-					<div
-						class="flex items-center space-x-6 text-sm font-medium"
-					>
-						<a
-							href="#projects"
-							class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-							>Projects</a
-						>
-						<a
-							href="#about"
-							class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-							>About</a
-						>
-						<a
-							href="#contact"
-							class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-							>Contact</a
-						>
-						<a
-							href="#"
-							class="text-gray-400 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
-							aria-label="Back to top">&uarr; Top</a
-						>
-					</div>
-				</div>
-			</div>
-		</footer>
 		<script>
-			// Scroll reveal animation
-			const observerOptions = {
-				root: null,
-				rootMargin: "0px",
-				threshold: 0.1,
-			};
-
-			const observer = new IntersectionObserver((entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						entry.target.classList.add("revealed");
-						observer.unobserve(entry.target);
+			// Scroll reveal — above-fold blocks show immediately; the rest fade up
+			// as they enter the viewport. Respects prefers-reduced-motion via CSS.
+			const revealEls = Array.from(
+				document.querySelectorAll<HTMLElement>("[data-reveal]"),
+			);
+			if ("IntersectionObserver" in window) {
+				const revealObs = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								entry.target.classList.add("r-shown");
+								revealObs.unobserve(entry.target);
+							}
+						});
+					},
+					{ threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+				);
+				const fold = (window.innerHeight || 0) * 0.92;
+				revealEls.forEach((el) => {
+					if (el.getBoundingClientRect().top < fold) {
+						el.classList.add("r-shown");
+					} else {
+						revealObs.observe(el);
 					}
 				});
-			}, observerOptions);
+			} else {
+				revealEls.forEach((el) => el.classList.add("r-shown"));
+			}
 
-			document.addEventListener("DOMContentLoaded", () => {
-				const revealElements = document.querySelectorAll(".reveal");
-				revealElements.forEach((el) => observer.observe(el));
-			});
+			// Active-nav highlighting — the Work/About/Contact link for the section
+			// currently in view gets an accent underline.
+			const navLinks = new Map<string, Element>();
+			document
+				.querySelectorAll<HTMLAnchorElement>(".jw-nav-link[data-nav]")
+				.forEach((link) => {
+					if (link.dataset.nav) navLinks.set(link.dataset.nav, link);
+				});
+			const sections = ["work", "about", "contact"]
+				.map((id) => document.getElementById(id))
+				.filter((s): s is HTMLElement => Boolean(s));
+
+			if ("IntersectionObserver" in window && sections.length) {
+				const ratios = new Map<string, number>();
+				let current = "";
+				const navObs = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((e) => ratios.set(e.target.id, e.intersectionRatio));
+						let best = "";
+						let bestRatio = 0;
+						ratios.forEach((ratio, id) => {
+							if (ratio > bestRatio) {
+								bestRatio = ratio;
+								best = id;
+							}
+						});
+						if (bestRatio < 0.05) best = "";
+						if (best !== current) {
+							current = best;
+							navLinks.forEach((link, id) =>
+								link.classList.toggle("jw-nav-on", id === best),
+							);
+						}
+					},
+					{ threshold: [0.05, 0.25, 0.5, 0.75], rootMargin: "-72px 0px -40% 0px" },
+				);
+				sections.forEach((s) => navObs.observe(s));
+			}
 		</script>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

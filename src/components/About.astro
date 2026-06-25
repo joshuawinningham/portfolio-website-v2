@@ -1,0 +1,130 @@
+---
+import { frontendSkills, backendSkills } from "../data/projects";
+---
+
+<section id="about" class="about">
+	<div data-r="about" data-reveal class="about-inner">
+		<div class="about-lead">
+			<p class="eyebrow">About</p>
+			<h2 class="about-title">A developer who ships, end to end.</h2>
+			<div class="about-stats">
+				<div>
+					<div class="stat-num">11</div>
+					<div class="stat-label">projects shipped</div>
+				</div>
+				<div>
+					<div class="stat-num">3+</div>
+					<div class="stat-label">years building</div>
+				</div>
+			</div>
+		</div>
+		<div class="about-body">
+			<p class="about-para">
+				I'm a Full-Stack Developer &amp; SEO Specialist who builds efficient, scalable
+				web applications. I care about elegant, user-focused solutions that blend
+				creativity, technology and thoughtful design — solving real problems and
+				delivering measurable results, whether that's a B2B order system on AWS or a
+				Lighthouse-perfect marketing site.
+			</p>
+			<div data-r="about-skills" class="about-skills">
+				<div>
+					<div class="skill-head">Frontend</div>
+					<div class="chip-row">
+						{frontendSkills.map((t) => <span class="skill-chip">{t}</span>)}
+					</div>
+				</div>
+				<div>
+					<div class="skill-head">Backend &amp; tools</div>
+					<div class="chip-row">
+						{backendSkills.map((t) => <span class="skill-chip">{t}</span>)}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.about {
+		scroll-margin-top: 80px;
+		background: var(--bg-alt);
+		border-top: 1px solid var(--line);
+		border-bottom: 1px solid var(--line);
+	}
+	.about-inner {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 88px 32px;
+		display: grid;
+		grid-template-columns: 0.85fr 1.15fr;
+		gap: 64px;
+		align-items: start;
+	}
+	.eyebrow {
+		font-size: 12px;
+		font-weight: 600;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: var(--fg3);
+		margin: 0 0 16px;
+	}
+	.about-title {
+		font-family: "Newsreader", serif;
+		font-size: clamp(30px, 3.4vw, 42px);
+		letter-spacing: -0.015em;
+		font-weight: 450;
+		line-height: 1.1;
+		margin: 0 0 26px;
+		font-variation-settings: "opsz" 40;
+	}
+	.about-stats {
+		display: flex;
+		gap: 30px;
+	}
+	.stat-num {
+		font-family: "Newsreader", serif;
+		font-size: 38px;
+		color: var(--primary);
+		line-height: 1;
+	}
+	.stat-label {
+		font-size: 12.5px;
+		color: var(--fg3);
+		margin-top: 4px;
+	}
+	.about-para {
+		font-size: 17px;
+		line-height: 1.62;
+		color: var(--fg2);
+		margin: 0 0 34px;
+	}
+	.about-skills {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 34px;
+	}
+	.skill-head {
+		font-size: 12px;
+		font-weight: 600;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--fg3);
+		margin-bottom: 14px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid var(--line);
+	}
+	.chip-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 7px;
+	}
+	.skill-chip {
+		font-size: 13px;
+		font-weight: 500;
+		color: var(--ink);
+		background: var(--card);
+		border: 1px solid var(--line);
+		border-radius: 8px;
+		padding: 6px 12px;
+	}
+</style>
