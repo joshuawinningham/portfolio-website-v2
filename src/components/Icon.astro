@@ -14,10 +14,12 @@ interface Props {
 		| "linkedin"
 		| "mail"
 		| "check"
-		| "arrow-right";
+		| "arrow-right"
+		| "menu"
+		| "x";
 	size?: number;
 	class?: string;
-	"aria-hidden"?: boolean | string;
+	"aria-hidden"?: boolean | "true" | "false";
 }
 
 const { name, size = 18, class: className, ...rest } = Astro.props;
@@ -35,6 +37,8 @@ const paths: Record<Props["name"], string> = {
 	mail: '<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>',
 	check: '<path d="M20 6 9 17l-5-5"/>',
 	"arrow-right": '<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
+	menu: '<path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/>',
+	x: '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
 };
 ---
 
