@@ -27,6 +27,8 @@ const ogImageURL = new URL(image, Astro.site ?? Astro.url).href;
 
 const keywords =
 	"Josh Winningham, Full Stack Developer & SEO Specialist, React, Next.js, ASP.NET Core, Astro, TypeScript, Web Development, Software Engineer, Portfolio, Web Applications, SEO";
+const fontHref =
+	"https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Hanken+Grotesk:wght@300..800&family=JetBrains+Mono:wght@400;500;700&display=swap";
 ---
 
 <!doctype html>
@@ -56,13 +58,12 @@ const keywords =
 		<meta name="robots" content="index, follow" />
 		<meta name="theme-color" content="#1F6B3E" />
 
-		<!-- Fonts -->
+		<!-- Fonts — loaded async (preload + media swap) so they don't block first paint -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Hanken+Grotesk:wght@300..800&family=JetBrains+Mono:wght@400;500;700&display=swap"
-			rel="stylesheet"
-		/>
+		<link rel="preload" as="style" href={fontHref} />
+		<link rel="stylesheet" href={fontHref} media="print" onload="this.media='all'" />
+		<noscript><link rel="stylesheet" href={fontHref} /></noscript>
 		<meta name="format-detection" content="telephone=no" />
 
 		<!-- Open Graph / Facebook -->
