@@ -88,6 +88,25 @@
 	display: none !important;
 }
 
+/* ---------- Skip-to-content link (revealed on keyboard focus) ---------- */
+.skip-link {
+	position: absolute;
+	left: 12px;
+	top: -52px;
+	z-index: 100;
+	padding: 10px 16px;
+	border-radius: 9px;
+	background: var(--primary);
+	color: var(--primary-ink);
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	transition: top 0.16s ease;
+}
+.skip-link:focus {
+	top: 12px;
+}
+
 /* ---------- Scroll reveal ---------- */
 [data-reveal] {
 	opacity: 0;
