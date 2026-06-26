@@ -34,12 +34,13 @@ const keywords =
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 
-		<!-- Theme initialization (must run before paint to avoid a flash) -->
+		<!-- Theme initialization (must run before paint to avoid a flash).
+		     Default is dark; only an explicit "light" choice overrides it. -->
 		<script is:inline>
 			const stored = localStorage.getItem("jw-theme");
 			document.documentElement.setAttribute(
 				"data-theme",
-				stored === "dark" ? "dark" : "light",
+				stored === "light" ? "light" : "dark",
 			);
 		</script>
 
