@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://your-domain.com/sitemap.xml 
+Sitemap: https://www.joshwinningham.com/sitemap-index.xml
