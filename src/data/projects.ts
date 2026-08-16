@@ -32,6 +32,8 @@ export interface Project {
 	/** Learning builds — demoted to the quiet Foundations list (no screenshot). */
 	foundation?: boolean;
 	blurb: string;
+	/** Concrete ownership and implementation evidence for featured case studies. */
+	highlights?: string[];
 	tech: string[];
 	/** Screenshot. Omitted for foundation projects (rendered text-only). */
 	image?: ImageMetadata;
@@ -46,12 +48,51 @@ export interface Project {
  */
 export const projects: Project[] = [
 	{
+		title: "Scale Visibility — AI Search Readiness Platform",
+		tag: "Next.js · SaaS",
+		cat: "Next.js",
+		featured: true,
+		blurb:
+			"An authenticated AI-search audit platform I built and operate, combining saved reports, citation testing, technical analysis, competitor benchmarking and six public readiness tools.",
+		highlights: [
+			"Own product design, full-stack implementation, deployment and ongoing production operations.",
+			"Built saved audits, AI citation matrices, competitor comparisons and paste-ready technical fixes.",
+			"Extended the product with six public tools for schema, crawler access, entity readiness and performance.",
+		],
+		tech: ["Next.js", "TypeScript", "PostgreSQL", "Vercel"],
+		image: scaleVisibility,
+		github: "https://github.com/joshuawinningham/scale-visibility",
+		live: "https://www.scalevisibility.com/",
+	},
+	{
+		title: "It's an Art Party — Multi-City Provider Directory",
+		tag: "Next.js · Marketplace",
+		cat: "Next.js",
+		featured: true,
+		blurb:
+			"A production marketplace that lets providers manage free listings and sponsored placements across three live city directories.",
+		highlights: [
+			"Built authenticated provider self-service for listing management and sponsored upgrades.",
+			"Implemented Clerk and Stripe billing, webhooks, PostgreSQL persistence with Drizzle, uploads, waitlists and lifecycle email.",
+			"Added ISR, dynamic metadata, JSON-LD, sitemaps and llms.txt for search and AI-crawler visibility.",
+		],
+		tech: ["Next.js", "TypeScript", "Clerk", "Stripe", "PostgreSQL"],
+		image: itsAnArtPartyNextjs,
+		github: "https://github.com/joshuawinningham/its-an-art-party-nextjs",
+		live: "https://www.itsanartparty.com/",
+	},
+	{
 		title: "Inventory & Order Tracker",
 		tag: "Full-Stack · AWS",
 		cat: "Full-Stack",
 		featured: true,
 		blurb:
-			"A B2B inventory and order-fulfillment system with SKU tracking, an enforced order workflow, automatic stock deduction and a full audit trail — deployed on AWS.",
+			"A B2B inventory and order-fulfillment system with SKU tracking, enforced order workflows, automatic stock deduction and a complete audit trail.",
+		highlights: [
+			"Built product, order and inventory workflows with strict status transitions and automatic stock deduction.",
+			"Designed low-stock alerts and an audit trail around real operational requirements.",
+			"Deployed the React and ASP.NET Core application on AWS App Runner, RDS and CloudFront.",
+		],
 		tech: ["C#", "ASP.NET Core", "React", "AWS"],
 		image: inventoryOrderTracker,
 		github: "https://github.com/joshuawinningham/inventory-order-tracker",
@@ -61,7 +102,6 @@ export const projects: Project[] = [
 		title: "SEO Audit Dashboard",
 		tag: "Next.js · SEO",
 		cat: "SEO",
-		featured: true,
 		blurb:
 			"Audits any URL across nine SEO dimensions with weighted scoring, readability analysis and actionable fixes — progressive loading via React Suspense.",
 		tech: ["Next.js", "TypeScript", "Cheerio"],
@@ -73,35 +113,12 @@ export const projects: Project[] = [
 		title: "Email KPI Dashboard",
 		tag: "React · Analytics",
 		cat: "Full-Stack",
-		featured: true,
 		blurb:
 			"An email client and analytics dashboard with real-time open tracking, event history and KPI monitoring on a Fastify + Supabase backend.",
 		tech: ["React", "Chart.js", "Fastify", "Supabase"],
 		image: emailKpi,
 		github: "https://github.com/joshuawinningham/email-kpi",
 		live: "https://www.10xinbox.com/",
-	},
-	{
-		title: "It's an Art Party — Next.js",
-		tag: "Next.js · SaaS",
-		cat: "Next.js",
-		blurb:
-			"A full Next.js 16 rebuild with a paid business directory — Clerk auth, Stripe billing and Drizzle ORM on Vercel Postgres.",
-		tech: ["Next.js", "Clerk", "Stripe", "PostgreSQL"],
-		image: itsAnArtPartyNextjs,
-		github: "https://github.com/joshuawinningham/its-an-art-party-nextjs",
-		live: "https://www.itsanartparty.com/",
-	},
-	{
-		title: "ScaleVisibility",
-		tag: "Astro · Agency",
-		cat: "Astro",
-		blurb:
-			"A web-design agency site in Astro with glass-morphism, animated mesh gradients and a WordPress-vs-Next.js PageSpeed case study.",
-		tech: ["Astro", "TypeScript", "Tailwind"],
-		image: scaleVisibility,
-		github: "https://github.com/joshuawinningham/scale-visibility",
-		live: "https://www.scalevisibility.com/",
 	},
 	{
 		title: "Miles & Steps Tracker",

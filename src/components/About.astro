@@ -6,25 +6,31 @@ import { frontendSkills, backendSkills } from "../data/projects";
 	<div data-r="about" data-reveal class="about-inner">
 		<div class="about-lead">
 			<p class="eyebrow">About</p>
-			<h2 class="about-title">A developer who ships, end to end.</h2>
+			<h2 class="about-title">A product-minded developer who owns the whole lifecycle.</h2>
 			<div class="about-stats">
 				<div>
-					<div class="stat-num">11</div>
-					<div class="stat-label">projects shipped</div>
+					<div class="stat-num">3</div>
+					<div class="stat-label">production products operated</div>
 				</div>
 				<div>
-					<div class="stat-num">3+</div>
-					<div class="stat-label">years building</div>
+					<div class="stat-num">16+</div>
+					<div class="stat-label">years in remote digital business</div>
+				</div>
+				<div>
+					<div class="stat-num">5,200+</div>
+					<div class="stat-label">SaaS users served</div>
 				</div>
 			</div>
 		</div>
 		<div class="about-body">
 			<p class="about-para">
-				I'm a Full-Stack Developer &amp; SEO Specialist who builds efficient, scalable
-				web applications. I care about elegant, user-focused solutions that blend
-				creativity, technology and thoughtful design — solving real problems and
-				delivering measurable results, whether that's a B2B order system on AWS or a
-				Lighthouse-perfect marketing site.
+				I'm a Full-Stack Product Developer who builds and operates production web
+				applications — from product requirements and user experience through APIs,
+				databases, third-party integrations, deployment and maintenance. Recent work
+				includes an authenticated AI-search audit platform and a multi-city provider
+				marketplace with accounts, payments and lifecycle workflows. My 16+ years
+				operating remote digital businesses brings a strong bias toward customer
+				problems, measurable outcomes and software that survives real-world use.
 			</p>
 			<div data-r="about-skills" class="about-skills">
 				<div>
@@ -79,7 +85,11 @@ import { frontendSkills, backendSkills } from "../data/projects";
 	}
 	.about-stats {
 		display: flex;
-		gap: 30px;
+		gap: 24px;
+		flex-wrap: wrap;
+	}
+	.about-stats > div {
+		flex: 1 1 110px;
 	}
 	.stat-num {
 		font-family: "Newsreader", serif;

@@ -25,12 +25,19 @@ const orderImg = flipped ? 1 : 2;
 		</div>
 		<h3 class="featured-title">{project.title}</h3>
 		<p class="featured-blurb">{project.blurb}</p>
+		{
+			project.highlights && (
+				<ul class="featured-highlights">
+					{project.highlights.map((highlight) => <li>{highlight}</li>)}
+				</ul>
+			)
+		}
 		<div class="chip-row">
 			{project.tech.map((t) => <span class="tech-chip">{t}</span>)}
 		</div>
 		<div class="featured-links">
 			<a href={project.github} target="_blank" rel="noopener noreferrer" class="lnk-muted">
-				<Icon name="github" size={16} aria-hidden="true" /> View code
+				<Icon name="github" size={16} aria-hidden="true" /> View repository
 			</a>
 			<a href={project.live} target="_blank" rel="noopener noreferrer" class="lnk-accent">
 				Live demo <span>→</span>
@@ -97,6 +104,22 @@ const orderImg = flipped ? 1 : 2;
 		color: var(--fg2);
 		margin: 0;
 		max-width: 46ch;
+	}
+	.featured-highlights {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		margin: 0;
+		padding: 0 0 0 18px;
+		color: var(--fg2);
+	}
+	.featured-highlights li {
+		font-size: 14px;
+		line-height: 1.48;
+		padding-left: 3px;
+	}
+	.featured-highlights li::marker {
+		color: var(--primary);
 	}
 	.chip-row {
 		display: flex;
