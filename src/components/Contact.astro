@@ -6,10 +6,11 @@ import Icon from "./Icon.astro";
 	<div data-r="contact" data-reveal class="contact-inner">
 		<div class="contact-lead">
 			<p class="eyebrow">Contact</p>
-			<h2 class="contact-title">Let's build something together.</h2>
+			<h2 class="contact-title">Looking for a product-minded developer?</h2>
 			<p class="contact-lede">
-				Open to freelance and full-time roles, working with teams everywhere. Drop
-				a note and I'll get back within a day.
+				I'm open to remote full-time full-stack and product-development roles. If
+				your team needs someone who can translate business requirements into shipped
+				software, I'd like to talk.
 			</p>
 			<a href="mailto:joshua.winningham@gmail.com" class="contact-email">
 				<Icon name="mail" size={20} aria-hidden="true" /> joshua.winningham@gmail.com
@@ -48,7 +49,7 @@ import Icon from "./Icon.astro";
 			<!-- Contact form (Web3Forms) -->
 			<form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
 				<input type="hidden" name="access_key" value="3a81dadb-858e-4f59-980b-ed96c338839b" />
-				<input type="hidden" name="subject" value="New Contact Form Submission from Portfolio" />
+				<input type="hidden" name="subject" value="New Portfolio Opportunity for Josh Winningham" />
 				<input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" />
 
 				<div class="field">
@@ -61,7 +62,7 @@ import Icon from "./Icon.astro";
 				</div>
 				<div class="field">
 					<label for="message">Message</label>
-					<textarea id="message" name="message" rows="4" placeholder="Tell me about your project…" required></textarea>
+					<textarea id="message" name="message" rows="4" placeholder="Tell me about the role or your team…" required></textarea>
 				</div>
 				<button type="submit" id="submit-btn" class="submit-btn">
 					<span id="btn-text">Send message</span>

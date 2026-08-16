@@ -1,6 +1,6 @@
 # Josh Winningham's Portfolio
 
-A modern, responsive portfolio website built with Astro and Tailwind CSS, showcasing my projects and skills as a Full Stack Developer & SEO Specialist.
+A modern, responsive portfolio website built with Astro and Tailwind CSS, showcasing production case studies and supporting work as a Full-Stack Product Developer.
 
 ## 🚀 Features
 
@@ -10,6 +10,8 @@ A modern, responsive portfolio website built with Astro and Tailwind CSS, showca
 - **SEO Optimized**: Comprehensive meta tags and structured data
 - **Fast Performance**: Optimized for quick loading and smooth interactions
 - **Project Showcase**: Dynamic project cards with links to GitHub and live demos
+- **Production Case Studies**: Ownership, architecture, integrations, and operational proof for flagship products
+- **Downloadable Résumé**: Current full-stack résumé available directly from the site
 - **Smooth Scrolling**: Seamless navigation between sections
 
 ## 🛠️ Technologies Used
@@ -24,12 +26,12 @@ A modern, responsive portfolio website built with Astro and Tailwind CSS, showca
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/joshuawinningham/portfolio-website.git
+git clone https://github.com/joshuawinningham/portfolio-website-v2.git
 ```
 
 2. Navigate to the project directory:
 ```bash
-cd portfolio-website
+cd portfolio-website-v2
 ```
 
 3. Install dependencies:
