@@ -8,26 +8,23 @@ import providerDirectoryShot from "../assets/its-an-art-party-nextjs.png";
 	<div class="hero-copy">
 		<div class="eyebrow">
 			<span class="eyebrow-dot"></span>
-			Full-Stack Product Developer
+			Work directly with Josh Winningham
 		</div>
 		<h1 class="hero-title">
-			I build and operate <em>production</em> web products.
+			Your partner for <em>web products</em> and marketing systems.
 		</h1>
 		<p class="hero-lede">
-			I turn business requirements into reliable software — from product UX and
-			APIs to databases, payments, deployment and ongoing operations — using
-			Next.js, TypeScript, React, PostgreSQL and AWS.
+			I’m Josh Winningham. Engage me directly for ongoing web and product
+			development, marketing operations, or an explicitly scoped combination.
+			I do the hands-on work and keep agreed priorities moving.
 		</p>
 		<div class="hero-ctas">
-			<a href="#work" class="btn-fill">View selected work</a>
-			<a href="/Joshua_Winningham_Full_Stack_Resume.pdf" download class="btn-ghost">
-				Download résumé <span class="arrow">↓</span>
-			</a>
+			<a href="/fractional-web-product-developer/" class="btn-fill">Web &amp; product development <Icon name="arrow-right" size={18} aria-hidden="true" /></a>
+			<a href="/fractional-marketing-operations/" class="btn-ghost">Marketing operations <Icon name="arrow-right" size={18} aria-hidden="true" /></a>
 		</div>
-		<div data-r="hero-stats" class="hero-stats">
-			<span class="stat"><Icon name="code-2" size={17} class="stat-icon" aria-hidden="true" /> Product-minded</span>
-			<span class="stat"><Icon name="search" size={17} class="stat-icon" aria-hidden="true" /> Full-stack ownership</span>
-			<span class="stat"><Icon name="zap" size={17} class="stat-icon" aria-hidden="true" /> Production-focused</span>
+		<div class="secondary-paths">
+			<a href="#work">View portfolio</a>
+			<a href="/Joshua_Winningham_Full_Stack_Resume.pdf" download>Download résumé</a>
 		</div>
 	</div>
 
@@ -54,10 +51,12 @@ import providerDirectoryShot from "../assets/its-an-art-party-nextjs.png";
 </section>
 
 <style>
+	.secondary-paths { display: flex; flex-wrap: wrap; gap: 12px 22px; }
+	.secondary-paths a { color: var(--fg2); font-size: 13px; text-decoration: underline; text-underline-offset: 4px; }
 	.hero {
 		max-width: 1200px;
 		margin: 0 auto;
-		padding: 84px 32px 76px;
+		padding: 64px 32px 64px;
 		display: grid;
 		grid-template-columns: 1.04fr 0.96fr;
 		gap: 60px;
@@ -76,7 +75,7 @@ import providerDirectoryShot from "../assets/its-an-art-party-nextjs.png";
 		font-weight: 600;
 		letter-spacing: 0.14em;
 		text-transform: uppercase;
-		color: var(--fg3);
+		color: var(--fg2);
 	}
 	.eyebrow-dot {
 		width: 7px;
@@ -86,7 +85,7 @@ import providerDirectoryShot from "../assets/its-an-art-party-nextjs.png";
 	}
 	.hero-title {
 		font-family: "Newsreader", serif;
-		font-size: clamp(48px, 5.6vw, 76px);
+		font-size: clamp(44px, 4.8vw, 64px);
 		line-height: 1.03;
 		letter-spacing: -0.02em;
 		font-weight: 420;
@@ -106,11 +105,14 @@ import providerDirectoryShot from "../assets/its-an-art-party-nextjs.png";
 	}
 	.hero-ctas {
 		display: flex;
+		flex-direction: column;
+		max-width: 430px;
 		gap: 13px;
 		margin-top: 6px;
 	}
 	.btn-fill {
 		display: inline-flex;
+		justify-content: space-between;
 		align-items: center;
 		gap: 8px;
 		font-size: 15px;
@@ -126,6 +128,7 @@ import providerDirectoryShot from "../assets/its-an-art-party-nextjs.png";
 	}
 	.btn-ghost {
 		display: inline-flex;
+		justify-content: space-between;
 		align-items: center;
 		gap: 7px;
 		font-size: 15px;
@@ -140,26 +143,6 @@ import providerDirectoryShot from "../assets/its-an-art-party-nextjs.png";
 	.btn-ghost:hover {
 		border-color: var(--ink);
 	}
-	.btn-ghost .arrow {
-		color: var(--accent);
-	}
-	.hero-stats {
-		display: flex;
-		gap: 26px;
-		flex-wrap: wrap;
-		margin-top: 14px;
-	}
-	.stat {
-		display: inline-flex;
-		align-items: center;
-		gap: 8px;
-		font-size: 13.5px;
-		color: var(--fg2);
-	}
-	.stat-icon {
-		color: var(--primary);
-	}
-
 	.hero-shot-wrap {
 		position: relative;
 	}
@@ -206,7 +189,7 @@ import providerDirectoryShot from "../assets/its-an-art-party-nextjs.png";
 		padding: 0 10px;
 		font-family: "JetBrains Mono", monospace;
 		font-size: 10.5px;
-		color: var(--fg3);
+		color: var(--fg2);
 	}
 	.browser-screen {
 		aspect-ratio: 16 / 10;
@@ -243,7 +226,7 @@ import providerDirectoryShot from "../assets/its-an-art-party-nextjs.png";
 		font-size: 10px;
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
-		color: var(--fg3);
+		color: var(--fg2);
 	}
 	.caption-title {
 		font-family: "Newsreader", serif;

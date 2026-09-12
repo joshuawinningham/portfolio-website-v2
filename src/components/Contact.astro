@@ -1,16 +1,17 @@
 ---
 import Icon from "./Icon.astro";
+import ContactForm from "./ContactForm.astro";
 ---
 
 <section id="contact" data-r="contact-sec" class="contact">
 	<div data-r="contact" data-reveal class="contact-inner">
 		<div class="contact-lead">
 			<p class="eyebrow">Contact</p>
-			<h2 class="contact-title">Looking for a product-minded developer?</h2>
+			<h2 class="contact-title">Let’s talk about what you need.</h2>
 			<p class="contact-lede">
-				I'm open to remote full-time full-stack and product-development roles. If
-				your team needs someone who can translate business requirements into shipped
-				software, I'd like to talk.
+				Engage me directly for ongoing web and product development, marketing operations,
+				or an explicitly scoped combination. Tell me what you need to build, improve,
+				or keep running, and we’ll discuss priorities and fit.
 			</p>
 			<a href="mailto:joshua.winningham@gmail.com" class="contact-email">
 				<Icon name="mail" size={20} aria-hidden="true" /> joshua.winningham@gmail.com
@@ -35,44 +36,7 @@ import Icon from "./Icon.astro";
 			</div>
 		</div>
 
-		<div class="contact-card">
-			<!-- Success state (shown after a successful Web3Forms submission) -->
-			<div id="form-success" class="form-success is-hidden">
-				<span class="success-badge"><Icon name="check" size={28} aria-hidden="true" /></span>
-				<h3 class="success-title">Message sent — thanks!</h3>
-				<p class="success-text">
-					I'll be in touch shortly. In the meantime, feel free to browse the work
-					above.
-				</p>
-			</div>
-
-			<!-- Contact form (Web3Forms) -->
-			<form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-				<input type="hidden" name="access_key" value="3a81dadb-858e-4f59-980b-ed96c338839b" />
-				<input type="hidden" name="subject" value="New Portfolio Opportunity for Josh Winningham" />
-				<input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" />
-
-				<div class="field">
-					<label for="name">Name</label>
-					<input id="name" name="name" type="text" placeholder="Your name" required />
-				</div>
-				<div class="field">
-					<label for="email">Email</label>
-					<input id="email" name="email" type="email" placeholder="you@email.com" required />
-				</div>
-				<div class="field">
-					<label for="message">Message</label>
-					<textarea id="message" name="message" rows="4" placeholder="Tell me about the role or your team…" required></textarea>
-				</div>
-				<button type="submit" id="submit-btn" class="submit-btn">
-					<span id="btn-text">Send message</span>
-					<span id="btn-loading" class="is-hidden">Sending…</span>
-				</button>
-				<p id="form-error" class="form-error is-hidden">
-					Something went wrong. Please try again or email me directly.
-				</p>
-			</form>
-		</div>
+		<ContactForm />
 	</div>
 </section>
 
@@ -94,7 +58,7 @@ import Icon from "./Icon.astro";
 		font-weight: 600;
 		letter-spacing: 0.14em;
 		text-transform: uppercase;
-		color: var(--fg3);
+		color: var(--fg2);
 		margin: 0 0 16px;
 	}
 	.contact-title {
@@ -113,13 +77,14 @@ import Icon from "./Icon.astro";
 		margin: 0 0 30px;
 		max-width: 42ch;
 	}
+
 	.contact-email {
 		display: inline-flex;
 		align-items: center;
 		gap: 10px;
 		font-family: "Newsreader", serif;
 		font-style: italic;
-		font-size: 24px;
+		font-size: clamp(18px, 4.5vw, 24px);
 		color: var(--accent);
 		text-decoration: none;
 	}
@@ -147,145 +112,4 @@ import Icon from "./Icon.astro";
 		border-color: var(--ink);
 	}
 
-	.contact-card {
-		background: var(--card);
-		border: 1px solid var(--line);
-		border-radius: 14px;
-		padding: 30px;
-		box-shadow: var(--shadow);
-	}
-	.contact-form {
-		display: flex;
-		flex-direction: column;
-		gap: 15px;
-	}
-	.field {
-		display: flex;
-		flex-direction: column;
-		gap: 7px;
-	}
-	.field label {
-		font-size: 12.5px;
-		font-weight: 600;
-		color: var(--fg2);
-	}
-	.field input,
-	.field textarea {
-		font-family: "Hanken Grotesk", sans-serif;
-		font-size: 14.5px;
-		padding: 12px 14px;
-		border: 1px solid var(--line2);
-		border-radius: 9px;
-		background: var(--bg);
-		color: var(--ink);
-	}
-	.field textarea {
-		resize: vertical;
-	}
-	.field input:focus,
-	.field textarea:focus {
-		outline: none;
-		border-color: var(--primary);
-		box-shadow: 0 0 0 3px var(--chip-bg);
-	}
-	/* Honeypot — hidden from real users */
-	.hp {
-		display: none !important;
-	}
-	.submit-btn {
-		margin-top: 4px;
-		font-family: "Hanken Grotesk", sans-serif;
-		font-size: 15px;
-		font-weight: 600;
-		padding: 14px;
-		background: var(--primary);
-		color: var(--primary-ink);
-		border: none;
-		border-radius: 10px;
-		cursor: pointer;
-	}
-	.submit-btn:hover {
-		background: var(--primary-hover);
-	}
-	.submit-btn:disabled {
-		opacity: 0.6;
-		cursor: not-allowed;
-	}
-	.form-error {
-		font-size: 13.5px;
-		color: var(--accent);
-		margin: 0;
-	}
-
-	.form-success {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		gap: 16px;
-		padding: 40px 10px;
-	}
-	.success-badge {
-		width: 56px;
-		height: 56px;
-		border-radius: 50%;
-		background: var(--chip-bg);
-		color: var(--primary);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	.success-title {
-		font-family: "Newsreader", serif;
-		font-size: 26px;
-		font-weight: 500;
-		margin: 0;
-	}
-	.success-text {
-		font-size: 15px;
-		color: var(--fg2);
-		margin: 0;
-		max-width: 30ch;
-	}
 </style>
-
-<script>
-	const form = document.getElementById("contact-form") as HTMLFormElement | null;
-	const submitBtn = document.getElementById("submit-btn") as HTMLButtonElement | null;
-	const btnText = document.getElementById("btn-text");
-	const btnLoading = document.getElementById("btn-loading");
-	const successPanel = document.getElementById("form-success");
-	const errorMessage = document.getElementById("form-error");
-
-	form?.addEventListener("submit", async (e) => {
-		e.preventDefault();
-		errorMessage?.classList.add("is-hidden");
-
-		if (submitBtn) submitBtn.disabled = true;
-		btnText?.classList.add("is-hidden");
-		btnLoading?.classList.remove("is-hidden");
-
-		try {
-			const response = await fetch("https://api.web3forms.com/submit", {
-				method: "POST",
-				body: new FormData(form),
-			});
-			const data = await response.json();
-
-			if (data.success) {
-				form.classList.add("is-hidden");
-				successPanel?.classList.remove("is-hidden");
-				form.reset();
-			} else {
-				errorMessage?.classList.remove("is-hidden");
-			}
-		} catch {
-			errorMessage?.classList.remove("is-hidden");
-		} finally {
-			if (submitBtn) submitBtn.disabled = false;
-			btnText?.classList.remove("is-hidden");
-			btnLoading?.classList.add("is-hidden");
-		}
-	});
-</script>

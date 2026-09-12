@@ -165,7 +165,7 @@ const fontHref =
 				.forEach((link) => {
 					if (link.dataset.nav) navLinks.set(link.dataset.nav, link);
 				});
-			const sections = ["work", "about", "contact"]
+			const sections = ["services", "work", "about", "contact"]
 				.map((id) => document.getElementById(id))
 				.filter((s): s is HTMLElement => Boolean(s));
 

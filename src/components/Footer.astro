@@ -1,5 +1,6 @@
 ---
 import Icon from "./Icon.astro";
+const homeAnchor = (id: string) => `${Astro.url.pathname === "/" ? "" : "/"}#${id}`;
 ---
 
 <footer class="site-footer">
@@ -14,10 +15,12 @@ import Icon from "./Icon.astro";
 			</div>
 			<div class="footer-col">
 				<div class="footer-head">Explore</div>
-				<a href="#work" class="foot-lnk">Work</a>
-				<a href="#about" class="foot-lnk">About</a>
+				<a href={homeAnchor("work")} class="foot-lnk">Work</a>
+				<a href={homeAnchor("about")} class="foot-lnk">About</a>
+				<a href="/fractional-marketing-operations/" class="foot-lnk">Marketing operations</a>
+				<a href="/fractional-web-product-developer/" class="foot-lnk">Web &amp; product development</a>
 				<a href="/Joshua_Winningham_Full_Stack_Resume.pdf" download class="foot-lnk">Résumé</a>
-				<a href="#contact" class="foot-lnk">Contact</a>
+				<a href="mailto:joshua.winningham@gmail.com?subject=Work%20with%20Josh%20Winningham" class="foot-lnk">Contact</a>
 			</div>
 			<div class="footer-col">
 				<div class="footer-head">Connect</div>
@@ -80,7 +83,7 @@ import Icon from "./Icon.astro";
 		font-weight: 600;
 		letter-spacing: 0.14em;
 		text-transform: uppercase;
-		color: rgba(244, 236, 216, 0.5);
+		color: rgba(244, 236, 216, 0.6);
 		margin-bottom: 4px;
 	}
 	.foot-lnk {
@@ -104,6 +107,6 @@ import Icon from "./Icon.astro";
 		gap: 12px;
 		font-family: "JetBrains Mono", monospace;
 		font-size: 11px;
-		color: rgba(244, 236, 216, 0.5);
+		color: rgba(244, 236, 216, 0.6);
 	}
 </style>

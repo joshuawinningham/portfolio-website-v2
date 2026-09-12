@@ -1,17 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ServicePaths from "../components/ServicePaths.astro";
 import Hero from "../components/Hero.astro";
 import Work from "../components/Work.astro";
 import About from "../components/About.astro";
 import Contact from "../components/Contact.astro";
 
-const pageTitle = "Josh Winningham - Full-Stack Product Developer";
+const pageTitle = "Josh Winningham | Fractional Development & Marketing Operations";
 const pageDescription =
-	"Full-Stack Product Developer building and operating production SaaS platforms, marketplaces and business applications with Next.js, TypeScript, React, PostgreSQL and AWS.";
+	"Work directly with Josh Winningham as your Fractional Web & Product Developer or Fractional Marketing Operations Partner. Ongoing, hands-on work with an agreed scope.";
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
 	<Hero />
+	<ServicePaths />
 	<Work />
 	<About />
 	<Contact />

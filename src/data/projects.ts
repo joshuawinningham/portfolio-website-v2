@@ -1,10 +1,11 @@
 import type { ImageMetadata } from "astro";
 
+import trueTourney from "../assets/true-tourney.png";
 import inventoryOrderTracker from "../assets/inventory-order-tracker.png";
 import seoAuditDashboard from "../assets/seo-audit-dashboard.png";
 import emailKpi from "../assets/project5.png";
 import itsAnArtPartyNextjs from "../assets/its-an-art-party-nextjs.png";
-import scaleVisibility from "../assets/scale-visibility.png";
+import scaleVisibility from "../assets/scale-visibility-app.png";
 import milesSteps from "../assets/project4.png";
 import astroHeadlessWp from "../assets/its_an_art_party.png";
 import itsAnArtPartyWp from "../assets/its-an-art-party-wp.png";
@@ -70,8 +71,8 @@ export const projects: Project[] = [
 			"Vercel",
 		],
 		image: scaleVisibility,
-		github: "https://github.com/joshuawinningham/scale-visibility",
-		live: "https://www.scalevisibility.com/",
+		github: "https://github.com/joshuawinningham/scale-visibility-app",
+		live: "https://app.scalevisibility.com/",
 	},
 	{
 		title: "It's an Art Party — Multi-City Provider Directory",
@@ -91,10 +92,26 @@ export const projects: Project[] = [
 		live: "https://www.itsanartparty.com/",
 	},
 	{
+		title: "TrueTourney — Youth Sports Tournament Directory",
+		tag: "Next.js · Data Automation",
+		cat: "Next.js",
+		featured: true,
+		blurb:
+			"A live tournament discovery product I build and operate, combining searchable event listings with automated data refreshes, director submission workflows, and registration-link reporting.",
+		highlights: [
+			"Built tournament search and browsing by age, month, and city, with event pages showing fees and division availability.",
+			"Implemented a data pipeline with scheduled refreshes, change history, and checks that prevent incomplete results from replacing existing data.",
+			"Connected director submissions to notification and receipt emails, and built outbound-click tracking and reporting.",
+		],
+		tech: ["Next.js", "TypeScript", "Node.js", "Upstash Redis", "Resend", "Vercel"],
+		image: trueTourney,
+		github: "https://github.com/joshuawinningham/true-tourney",
+		live: "https://www.truetourney.com/",
+	},
+	{
 		title: "Inventory & Order Tracker",
 		tag: "Full-Stack · AWS",
 		cat: "Full-Stack",
-		featured: true,
 		blurb:
 			"A B2B inventory and order-fulfillment system with SKU tracking, enforced order workflows, automatic stock deduction and a complete audit trail.",
 		highlights: [

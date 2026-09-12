@@ -5,11 +5,13 @@ import type { Project } from "../data/projects";
 
 interface Props {
 	project: Project;
+	/** Optional context-specific proof copy; the shared card design stays the same. */
+	blurb?: string;
 	/** True when this card is part of the default "All" grid (non-featured, non-foundation). */
 	inDefault: boolean;
 }
 
-const { project, inDefault } = Astro.props;
+const { project, inDefault, blurb = project.blurb } = Astro.props;
 ---
 
 <article
@@ -26,7 +28,7 @@ const { project, inDefault } = Astro.props;
 	<div class="card-body">
 		<div class="card-tag">{project.tag}</div>
 		<h3 class="card-title">{project.title}</h3>
-		<p class="card-blurb">{project.blurb}</p>
+		<p class="card-blurb">{blurb}</p>
 		<div class="chip-row">
 			{project.tech.map((t) => <span class="tech-chip">{t}</span>)}
 		</div>
