@@ -2,5 +2,27 @@
   "framework": "astro",
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
-  "installCommand": "npm install"
-} 
+  "installCommand": "npm install",
+  "redirects": [
+    {
+      "source": "/fractional-web-product-developer",
+      "destination": "https://www.scalevisibility.com/fractional-web-developer/",
+      "permanent": true
+    },
+    {
+      "source": "/fractional-web-product-developer/",
+      "destination": "https://www.scalevisibility.com/fractional-web-developer/",
+      "permanent": true
+    },
+    {
+      "source": "/fractional-marketing-operations",
+      "destination": "https://www.scalevisibility.com/fractional-marketing-operations/",
+      "permanent": true
+    },
+    {
+      "source": "/fractional-marketing-operations/",
+      "destination": "https://www.scalevisibility.com/fractional-marketing-operations/",
+      "permanent": true
+    }
+  ]
+}

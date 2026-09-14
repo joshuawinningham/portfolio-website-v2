@@ -1,9 +1,0 @@
----
-import Layout from "./Layout.astro";
-import "../styles/fractional.css";
-interface Props { title: string; description: string; }
-const { title, description } = Astro.props;
----
-<Layout title={title} description={description}>
-	<div class="fractional-page"><slot /></div>
-</Layout>

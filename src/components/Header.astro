@@ -2,7 +2,6 @@
 import Icon from "./Icon.astro";
 const isHome = Astro.url.pathname === "/";
 const contactHref = "#contact";
-const isFractional = ["/fractional-marketing-operations", "/fractional-web-product-developer"].includes(Astro.url.pathname.replace(/\/$/, ""));
 const homeAnchor = (id: string) => `${isHome ? "" : "/"}#${id}`;
 ---
 
@@ -13,7 +12,7 @@ const homeAnchor = (id: string) => `${isHome ? "" : "/"}#${id}`;
 		</a>
 
 		<nav data-r="nav" class="nav-links" aria-label="Main navigation">
-			<a href={homeAnchor("services")} class:list={["jw-nav-link", { "jw-nav-on": isFractional }]} data-nav={isHome ? "services" : undefined}>Services</a>
+			<a href={homeAnchor("services")} class="jw-nav-link" data-nav={isHome ? "services" : undefined}>Services</a>
 			<a href={homeAnchor("work")} class="jw-nav-link" data-nav={isHome ? "work" : undefined}>Work</a>
 			<a href={homeAnchor("about")} class="jw-nav-link" data-nav={isHome ? "about" : undefined}>About</a>
 			<a href="/Joshua_Winningham_Full_Stack_Resume.pdf" download class="jw-nav-link">Résumé</a>
@@ -44,8 +43,8 @@ const homeAnchor = (id: string) => `${isHome ? "" : "/"}#${id}`;
 		<a href={homeAnchor("services")} class="mobile-link">Services</a>
 		<a href={homeAnchor("work")} class="mobile-link">Work</a>
 		<a href={homeAnchor("about")} class="mobile-link">About</a>
-		<a href="/fractional-marketing-operations/" class="mobile-link" aria-current={Astro.url.pathname.includes("fractional-marketing") ? "page" : undefined}>Marketing operations</a>
-		<a href="/fractional-web-product-developer/" class="mobile-link" aria-current={Astro.url.pathname.includes("fractional-web") ? "page" : undefined}>Web &amp; product development</a>
+		<a href="https://www.scalevisibility.com/fractional-marketing-operations/" class="mobile-link">Marketing operations</a>
+		<a href="https://www.scalevisibility.com/fractional-web-developer/" class="mobile-link">Web &amp; product development</a>
 		<a href="/Joshua_Winningham_Full_Stack_Resume.pdf" download class="mobile-link">Résumé</a>
 		<a href={contactHref} class="mobile-link">Contact</a>
 	</nav>
