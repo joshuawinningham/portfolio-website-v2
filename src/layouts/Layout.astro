@@ -12,7 +12,7 @@ interface Props {
 
 	const {
 	title,
-	description = "Full-Stack Product Developer building and operating production SaaS platforms, marketplaces and business applications with Next.js, TypeScript, React, PostgreSQL and AWS.",
+	description = "Work directly with Josh Winningham as your Fractional Web & Product Developer or Fractional Marketing Operations Partner. Ongoing, hands-on work with an agreed scope.",
 	image = "/images/og-image-developer.png",
 	article = false,
 } = Astro.props;
@@ -26,7 +26,7 @@ const canonicalURL = Astro.site
 const ogImageURL = new URL(image, Astro.site ?? Astro.url).href;
 
 const keywords =
-	"Josh Winningham, Full-Stack Product Developer, Product Engineer, React, Next.js, ASP.NET Core, TypeScript, PostgreSQL, AWS, SaaS, Marketplace Development, Software Engineer, Portfolio, Technical SEO";
+	"Josh Winningham, Fractional Web Developer, Fractional Marketing Operations, Full-Stack Product Developer, Product Engineer, React, Next.js, ASP.NET Core, TypeScript, PostgreSQL, AWS, SaaS, Marketplace Development, Software Engineer, Portfolio, Technical SEO";
 const fontHref =
 	"https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Hanken+Grotesk:wght@300..800&family=JetBrains+Mono:wght@400;500;700&display=swap";
 ---
@@ -74,7 +74,7 @@ const fontHref =
 		<meta property="og:image" content={ogImageURL} />
 		<meta
 			property="og:site_name"
-			content="Josh Winningham - Full-Stack Product Developer"
+			content="Josh Winningham"
 		/>
 		<meta property="og:locale" content="en_US" />
 
@@ -100,7 +100,7 @@ const fontHref =
 				url: canonicalURL,
 				image: ogImageURL,
 				description: description,
-				jobTitle: "Full-Stack Product Developer",
+				jobTitle: "Fractional Web & Product Developer",
 				sameAs: [
 					"https://github.com/joshuawinningham",
 					"https://linkedin.com/in/joshuawinningham",

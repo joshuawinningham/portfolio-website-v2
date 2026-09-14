@@ -1,7 +1,7 @@
 ---
 import Icon from "./Icon.astro";
 const isHome = Astro.url.pathname === "/";
-const contactHref = isHome ? "mailto:joshua.winningham@gmail.com?subject=Work%20with%20Josh%20Winningham" : "#contact";
+const contactHref = "#contact";
 const isFractional = ["/fractional-marketing-operations", "/fractional-web-product-developer"].includes(Astro.url.pathname.replace(/\/$/, ""));
 const homeAnchor = (id: string) => `${isHome ? "" : "/"}#${id}`;
 ---
@@ -17,7 +17,7 @@ const homeAnchor = (id: string) => `${isHome ? "" : "/"}#${id}`;
 			<a href={homeAnchor("work")} class="jw-nav-link" data-nav={isHome ? "work" : undefined}>Work</a>
 			<a href={homeAnchor("about")} class="jw-nav-link" data-nav={isHome ? "about" : undefined}>About</a>
 			<a href="/Joshua_Winningham_Full_Stack_Resume.pdf" download class="jw-nav-link">Résumé</a>
-			<a href={contactHref} class="jw-nav-link">Contact</a>
+			<a href={contactHref} class="jw-nav-link" data-nav={isHome ? "contact" : undefined}>Contact</a>
 		</nav>
 
 		<div class="header-actions">
@@ -41,6 +41,7 @@ const homeAnchor = (id: string) => `${isHome ? "" : "/"}#${id}`;
 	</div>
 
 	<nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
+		<a href={homeAnchor("services")} class="mobile-link">Services</a>
 		<a href={homeAnchor("work")} class="mobile-link">Work</a>
 		<a href={homeAnchor("about")} class="mobile-link">About</a>
 		<a href="/fractional-marketing-operations/" class="mobile-link" aria-current={Astro.url.pathname.includes("fractional-marketing") ? "page" : undefined}>Marketing operations</a>

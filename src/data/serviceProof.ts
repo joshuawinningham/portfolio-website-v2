@@ -19,7 +19,7 @@ export const marketingProof: ServiceProofItem[] = [
 	},
 	{
 		project: projectNamed("Scale Visibility — AI Search Readiness Platform"),
-		relevance: "Connected audit processing, saved reports, subscription events, and customer notifications. Background workflows handle recurring checks and report-ready emails. This is proof of the systems I build and operate; Scale Visibility’s AI visibility services have their own scopes.",
+		relevance: "Connected audit processing, saved reports, subscription events, and customer notifications. Background workflows handle recurring checks and report-ready emails.",
 	},
 ];
 

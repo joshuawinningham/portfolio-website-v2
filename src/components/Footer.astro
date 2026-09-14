@@ -9,8 +9,8 @@ const homeAnchor = (id: string) => `${Astro.url.pathname === "/" ? "" : "/"}#${i
 			<div class="footer-brand">
 				<span class="footer-name">Josh Winningham</span>
 				<p class="footer-tagline">
-					Full-Stack Product Developer building and operating production web
-					products.
+					Fractional web &amp; product developer and marketing operations partner,
+					building and operating production web products.
 				</p>
 			</div>
 			<div class="footer-col">
@@ -20,7 +20,7 @@ const homeAnchor = (id: string) => `${Astro.url.pathname === "/" ? "" : "/"}#${i
 				<a href="/fractional-marketing-operations/" class="foot-lnk">Marketing operations</a>
 				<a href="/fractional-web-product-developer/" class="foot-lnk">Web &amp; product development</a>
 				<a href="/Joshua_Winningham_Full_Stack_Resume.pdf" download class="foot-lnk">Résumé</a>
-				<a href="mailto:joshua.winningham@gmail.com?subject=Work%20with%20Josh%20Winningham" class="foot-lnk">Contact</a>
+				<a href={homeAnchor("contact")} class="foot-lnk">Contact</a>
 			</div>
 			<div class="footer-col">
 				<div class="footer-head">Connect</div>
