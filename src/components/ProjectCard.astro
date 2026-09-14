@@ -9,9 +9,11 @@ interface Props {
 	blurb?: string;
 	/** True when this card is part of the default "All" grid (non-featured, non-foundation). */
 	inDefault: boolean;
+	/** Hide the Featured pill where every card in the section is featured. */
+	showBadge?: boolean;
 }
 
-const { project, inDefault, blurb = project.blurb } = Astro.props;
+const { project, inDefault, blurb = project.blurb, showBadge = true } = Astro.props;
 ---
 
 <article
@@ -23,7 +25,7 @@ const { project, inDefault, blurb = project.blurb } = Astro.props;
 >
 	<div class="card-shot">
 		{project.image && <Image src={project.image} alt={project.title} loading="lazy" />}
-		{project.featured && <span class="card-badge">Featured</span>}
+		{project.featured && showBadge && <span class="card-badge">Featured</span>}
 	</div>
 	<div class="card-body">
 		<div class="card-tag">{project.tag}</div>

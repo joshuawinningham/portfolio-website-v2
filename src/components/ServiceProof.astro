@@ -10,7 +10,7 @@ const { items, description } = Astro.props;
 		<p>{description}</p>
 	</div>
 	<div class:list={["proof-grid", { "proof-grid-three": items.length === 3 }]}>
-		{items.map(({ project, relevance }) => <ProjectCard project={project} blurb={relevance} inDefault={true} />)}
+		{items.map(({ project, relevance }) => <ProjectCard project={project} blurb={relevance} inDefault={true} showBadge={false} />)}
 	</div>
 </section>
 <style>
