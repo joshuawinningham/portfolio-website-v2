@@ -16,12 +16,12 @@
     },
     {
       "source": "/fractional-marketing-operations",
-      "destination": "https://www.scalevisibility.com/fractional-marketing-operations/",
+      "destination": "https://www.scalevisibility.com/services/",
       "permanent": true
     },
     {
       "source": "/fractional-marketing-operations/",
-      "destination": "https://www.scalevisibility.com/fractional-marketing-operations/",
+      "destination": "https://www.scalevisibility.com/services/",
       "permanent": true
     }
   ]
