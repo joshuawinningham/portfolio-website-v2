@@ -6,12 +6,12 @@
   "redirects": [
     {
       "source": "/fractional-web-product-developer",
-      "destination": "https://www.scalevisibility.com/fractional-web-developer/",
+      "destination": "https://www.scalevisibility.com/web-design/",
       "permanent": true
     },
     {
       "source": "/fractional-web-product-developer/",
-      "destination": "https://www.scalevisibility.com/fractional-web-developer/",
+      "destination": "https://www.scalevisibility.com/web-design/",
       "permanent": true
     },
     {
