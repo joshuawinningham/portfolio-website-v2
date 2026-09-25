@@ -12,7 +12,7 @@ const homeAnchor = (id: string) => `${isHome ? "" : "/"}#${id}`;
 		</a>
 
 		<nav data-r="nav" class="nav-links" aria-label="Main navigation">
-			<a href={homeAnchor("services")} class="jw-nav-link" data-nav={isHome ? "services" : undefined}>Services</a>
+			<a href={homeAnchor("services")} class="jw-nav-link" data-nav={isHome ? "services" : undefined}>Work with me</a>
 			<a href={homeAnchor("work")} class="jw-nav-link" data-nav={isHome ? "work" : undefined}>Work</a>
 			<a href={homeAnchor("about")} class="jw-nav-link" data-nav={isHome ? "about" : undefined}>About</a>
 			<a href="/Joshua_Winningham_Full_Stack_Resume.pdf" download class="jw-nav-link">Résumé</a>
@@ -40,10 +40,10 @@ const homeAnchor = (id: string) => `${isHome ? "" : "/"}#${id}`;
 	</div>
 
 	<nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
-		<a href={homeAnchor("services")} class="mobile-link">Services</a>
+		<a href={homeAnchor("services")} class="mobile-link">Work with me</a>
 		<a href={homeAnchor("work")} class="mobile-link">Work</a>
 		<a href={homeAnchor("about")} class="mobile-link">About</a>
-		<a href="https://www.scalevisibility.com/web-design/" class="mobile-link">Website design &amp; development</a>
+		<a href="https://www.scalevisibility.com/" class="mobile-link">Scale Visibility</a>
 		<a href="/Joshua_Winningham_Full_Stack_Resume.pdf" download class="mobile-link">Résumé</a>
 		<a href={contactHref} class="mobile-link">Contact</a>
 	</nav>
