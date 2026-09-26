@@ -35,9 +35,17 @@ const { project, inDefault, blurb = project.blurb, showBadge = true } = Astro.pr
 			{project.tech.map((t) => <span class="tech-chip">{t}</span>)}
 		</div>
 		<div class="card-links">
-			<a href={project.github} target="_blank" rel="noopener noreferrer" class="lnk-muted">
-				<Icon name="github" size={15} aria-hidden="true" /> Code
-			</a>
+			{
+				project.github ? (
+					<a href={project.github} target="_blank" rel="noopener noreferrer" class="lnk-muted">
+						<Icon name="github" size={15} aria-hidden="true" /> Code
+					</a>
+				) : (
+					<a href="#contact" class="lnk-muted" title="The source is private. Get in touch and I'll walk you through the code.">
+						<Icon name="lock" size={15} aria-hidden="true" /> Private repo · walkthrough on request
+					</a>
+				)
+			}
 			<a href={project.live} target="_blank" rel="noopener noreferrer" class="lnk-accent">
 				Live demo <span>→</span>
 			</a>
@@ -126,7 +134,7 @@ const { project, inDefault, blurb = project.blurb, showBadge = true } = Astro.pr
 		margin-top: 2px;
 	}
 	.tech-chip {
-		font-family: "JetBrains Mono", monospace;
+		font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 		font-size: 10.5px;
 		color: var(--chip-ink);
 		background: var(--chip-bg);

@@ -38,7 +38,8 @@ export interface Project {
 	tech: string[];
 	/** Screenshot. Omitted for foundation projects (rendered text-only). */
 	image?: ImageMetadata;
-	github: string;
+	/** Public repository. Omitted when the source is private; the UI then offers a walkthrough on request. */
+	github?: string;
 	live: string;
 }
 
@@ -71,7 +72,6 @@ export const projects: Project[] = [
 			"Vercel",
 		],
 		image: scaleVisibility,
-		github: "https://github.com/joshuawinningham/scale-visibility-app",
 		live: "https://app.scalevisibility.com/",
 	},
 	{
@@ -88,7 +88,6 @@ export const projects: Project[] = [
 		],
 		tech: ["Next.js", "TypeScript", "Clerk", "Stripe", "PostgreSQL"],
 		image: itsAnArtPartyNextjs,
-		github: "https://github.com/joshuawinningham/its-an-art-party-nextjs",
 		live: "https://www.itsanartparty.com/",
 	},
 	{
@@ -105,7 +104,6 @@ export const projects: Project[] = [
 		],
 		tech: ["Next.js", "TypeScript", "Node.js", "Upstash Redis", "Resend", "Vercel"],
 		image: trueTourney,
-		github: "https://github.com/joshuawinningham/true-tourney",
 		live: "https://www.truetourney.com/",
 	},
 	{
@@ -143,7 +141,7 @@ export const projects: Project[] = [
 			"An email client and analytics dashboard with real-time open tracking, event history and KPI monitoring on a Fastify + Supabase backend.",
 		tech: ["React", "Chart.js", "Fastify", "Supabase"],
 		image: emailKpi,
-		github: "https://github.com/joshuawinningham/email-kpi",
+		github: "https://github.com/joshuawinningham/10xinbox",
 		live: "https://www.10xinbox.com/",
 	},
 	{

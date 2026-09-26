@@ -8,13 +8,16 @@ interface Props {
 	description?: string;
 	image?: string;
 	article?: boolean;
+	/** Keep the page out of search indexes (error pages). */
+	noindex?: boolean;
 }
 
 	const {
 	title,
-	description = "Josh Winningham, full-stack web and product developer: production web products built and operated end to end. Portfolio, résumé, and how to work with me. Founder of Scale Visibility.",
-	image = "/images/og-image-developer.png",
+	description = "Josh Winningham, full-stack software engineer: production web products built and operated end to end. Portfolio, résumé, and how to work with me. Founder of Scale Visibility.",
+	image = "/images/og-image-developer.jpg",
 	article = false,
+	noindex = false,
 } = Astro.props;
 
 // Safely get the canonical URL
@@ -26,9 +29,7 @@ const canonicalURL = Astro.site
 const ogImageURL = new URL(image, Astro.site ?? Astro.url).href;
 
 const keywords =
-	"Josh Winningham, Web & Product Developer, Full-Stack Developer, Product Engineer, Web Developer, Product Engineer, React, Next.js, ASP.NET Core, TypeScript, PostgreSQL, AWS, SaaS, Marketplace Development, Software Engineer, Portfolio, Technical SEO";
-const fontHref =
-	"https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Hanken+Grotesk:wght@300..800&family=JetBrains+Mono:wght@400;500;700&display=swap";
+	"Josh Winningham, Full-Stack Software Engineer, Full-Stack Developer, Product Engineer, Web Developer, React, Next.js, ASP.NET Core, TypeScript, PostgreSQL, AWS, SaaS, Marketplace Development, Software Engineer, Portfolio, Technical SEO";
 ---
 
 <!doctype html>
@@ -55,15 +56,13 @@ const fontHref =
 		<meta name="description" content={description} />
 		<meta name="author" content="Josh Winningham" />
 		<meta name="keywords" content={keywords} />
-		<meta name="robots" content="index, follow" />
+		<meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
 		<meta name="theme-color" content="#1F6B3E" />
 
-		<!-- Fonts — loaded async (preload + media swap) so they don't block first paint -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="preload" as="style" href={fontHref} />
-		<link rel="stylesheet" href={fontHref} media="print" onload="this.media='all'" />
-		<noscript><link rel="stylesheet" href={fontHref} /></noscript>
+		<!-- Fonts — self-hosted subsets (see public/fonts); preloaded so text settles on first paint -->
+		<link rel="preload" as="font" type="font/woff2" href="/fonts/hanken-grotesk-var.woff2" crossorigin />
+		<link rel="preload" as="font" type="font/woff2" href="/fonts/newsreader-var.woff2" crossorigin />
+		<link rel="preload" as="font" type="font/woff2" href="/fonts/newsreader-italic-var.woff2" crossorigin />
 		<meta name="format-detection" content="telephone=no" />
 
 		<!-- Open Graph / Facebook -->
@@ -100,7 +99,7 @@ const fontHref =
 				url: canonicalURL,
 				image: ogImageURL,
 				description: description,
-				jobTitle: "Web & Product Developer",
+				jobTitle: "Full-Stack Software Engineer",
 				sameAs: [
 					"https://github.com/joshuawinningham",
 					"https://linkedin.com/in/joshuawinningham",
@@ -143,7 +142,7 @@ const fontHref =
 							}
 						});
 					},
-					{ threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+					{ threshold: 0.05, rootMargin: "0px 0px 0px 0px" },
 				);
 				const fold = (window.innerHeight || 0) * 0.92;
 				revealEls.forEach((el) => {

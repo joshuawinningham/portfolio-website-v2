@@ -1,0 +1,102 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Icon from "../components/Icon.astro";
+---
+
+<Layout title="Page not found | Josh Winningham" description="That page doesn't exist. Head back to the portfolio." noindex>
+	<section class="nf">
+		<div class="eyebrow"><span class="eyebrow-dot"></span> 404 · Page not found</div>
+		<h1 class="nf-title">That page <em>isn't here</em>.</h1>
+		<p class="nf-lede">
+			The link may be old or mistyped. Everything I've built and how to reach me is on the home page.
+		</p>
+		<div class="nf-ctas">
+			<a href="/" class="btn-fill">Back to home <Icon name="arrow-right" size={18} aria-hidden="true" /></a>
+			<a href="/#work" class="btn-ghost">See the work <Icon name="arrow-right" size={18} aria-hidden="true" /></a>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.nf {
+		max-width: 720px;
+		margin: 0 auto;
+		padding: 96px 32px 120px;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+	.eyebrow {
+		display: inline-flex;
+		align-items: center;
+		gap: 9px;
+		font-size: 12px;
+		font-weight: 600;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: var(--fg2);
+	}
+	.eyebrow-dot {
+		width: 7px;
+		height: 7px;
+		border-radius: 50%;
+		background: var(--accent-bright);
+	}
+	.nf-title {
+		font-family: "Newsreader", serif;
+		font-size: clamp(40px, 5vw, 60px);
+		line-height: 1.05;
+		letter-spacing: -0.02em;
+		font-weight: 420;
+		margin: 0;
+		font-variation-settings: "opsz" 72;
+	}
+	.nf-title em {
+		font-style: italic;
+		color: var(--accent);
+	}
+	.nf-lede {
+		font-size: 18px;
+		line-height: 1.6;
+		color: var(--fg2);
+		margin: 0;
+		max-width: 48ch;
+	}
+	.nf-ctas {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 13px;
+		margin-top: 6px;
+	}
+	.btn-fill,
+	.btn-ghost {
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		font-size: 15px;
+		font-weight: 600;
+		text-decoration: none;
+		padding: 13px 22px;
+		border-radius: 8px;
+		transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+	}
+	.btn-fill {
+		background: var(--primary);
+		color: var(--primary-ink);
+	}
+	.btn-fill:hover {
+		background: var(--primary-hover);
+	}
+	.btn-ghost {
+		border: 1px solid var(--line2);
+		color: var(--ink);
+	}
+	.btn-ghost:hover {
+		border-color: var(--ink);
+	}
+	@media (max-width: 600px) {
+		.nf {
+			padding: 64px 18px 80px;
+		}
+	}
+</style>
