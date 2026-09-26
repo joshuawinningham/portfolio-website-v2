@@ -118,6 +118,7 @@ export const projects: Project[] = [
 			"The marketing site for the Charlotte cleaning company I founded in 2008: Astro 6 and Tailwind v4 with a Formspree estimate form, LocalBusiness and FAQ JSON-LD, sitemap, legacy-URL redirects and GA4.",
 		tech: ["Astro", "Tailwind CSS", "Formspree", "Vercel"],
 		image: allCleanHome,
+		github: "https://github.com/joshuawinningham/all-clean-home-showcase",
 		live: "https://www.allcleanhome.com/",
 	},
 	{

@@ -38,7 +38,7 @@ const { project, inDefault, blurb = project.blurb, showBadge = true } = Astro.pr
 			{
 				project.github ? (
 					<a href={project.github} target="_blank" rel="noopener noreferrer" class="lnk-muted">
-						<Icon name="github" size={15} aria-hidden="true" /> Code
+						<Icon name="github" size={15} aria-hidden="true" /> {project.github.includes("-showcase") ? "Project showcase" : "Code"}
 					</a>
 				) : (
 					<a href="#contact" class="lnk-muted" title="The source is private. Get in touch and I'll walk you through the code.">
