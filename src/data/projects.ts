@@ -2,6 +2,7 @@ import type { ImageMetadata } from "astro";
 
 import trueTourney from "../assets/true-tourney.png";
 import inventoryOrderTracker from "../assets/inventory-order-tracker.png";
+import allCleanHome from "../assets/all-clean-home.png";
 import seoAuditDashboard from "../assets/seo-audit-dashboard.png";
 import emailKpi from "../assets/project5.png";
 import itsAnArtPartyNextjs from "../assets/its-an-art-party-nextjs.png";
@@ -108,6 +109,16 @@ export const projects: Project[] = [
 		image: trueTourney,
 		github: "https://github.com/joshuawinningham/true-tourney-showcase",
 		live: "https://www.truetourney.com/",
+	},
+	{
+		title: "All Clean Home — Local Service Website",
+		tag: "Astro · Local Business",
+		cat: "Astro",
+		blurb:
+			"The marketing site for the Charlotte cleaning company I founded in 2008: Astro 6 and Tailwind v4 with a Formspree estimate form, LocalBusiness and FAQ JSON-LD, sitemap, legacy-URL redirects and GA4.",
+		tech: ["Astro", "Tailwind CSS", "Formspree", "Vercel"],
+		image: allCleanHome,
+		live: "https://www.allcleanhome.com/",
 	},
 	{
 		title: "Inventory & Order Tracker",
