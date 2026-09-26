@@ -3,6 +3,7 @@ import type { ImageMetadata } from "astro";
 import trueTourney from "../assets/true-tourney.png";
 import inventoryOrderTracker from "../assets/inventory-order-tracker.png";
 import allCleanHome from "../assets/all-clean-home.png";
+import scaleVisibilityWebsite from "../assets/scale-visibility-website.png";
 import seoAuditDashboard from "../assets/seo-audit-dashboard.png";
 import emailKpi from "../assets/project5.png";
 import itsAnArtPartyNextjs from "../assets/its-an-art-party-nextjs.png";
@@ -73,7 +74,7 @@ export const projects: Project[] = [
 			"Vercel",
 		],
 		image: scaleVisibility,
-		github: "https://github.com/joshuawinningham/scale-visibility-showcase",
+		github: "https://github.com/joshuawinningham/scale-visibility-app-showcase",
 		live: "https://app.scalevisibility.com/",
 	},
 	{
@@ -120,6 +121,17 @@ export const projects: Project[] = [
 		image: allCleanHome,
 		github: "https://github.com/joshuawinningham/all-clean-home-showcase",
 		live: "https://www.allcleanhome.com/",
+	},
+	{
+		title: "Scale Visibility — Marketing Site & Free Tools",
+		tag: "Astro · SEO",
+		cat: "SEO",
+		blurb:
+			"The public side of Scale Visibility: an Astro 6 site with an MDX blog, service pages, and six free AI-visibility tools built as React islands, two of them backed by rate-limited serverless routes calling Claude, OpenAI, Gemini and PageSpeed Insights.",
+		tech: ["Astro", "React", "Tailwind CSS", "Vercel"],
+		image: scaleVisibilityWebsite,
+		github: "https://github.com/joshuawinningham/scale-visibility-website-showcase",
+		live: "https://www.scalevisibility.com/",
 	},
 	{
 		title: "Inventory & Order Tracker",
