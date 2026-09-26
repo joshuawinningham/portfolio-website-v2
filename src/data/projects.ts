@@ -72,6 +72,7 @@ export const projects: Project[] = [
 			"Vercel",
 		],
 		image: scaleVisibility,
+		github: "https://github.com/joshuawinningham/scale-visibility-showcase",
 		live: "https://app.scalevisibility.com/",
 	},
 	{
@@ -88,6 +89,7 @@ export const projects: Project[] = [
 		],
 		tech: ["Next.js", "TypeScript", "Clerk", "Stripe", "PostgreSQL"],
 		image: itsAnArtPartyNextjs,
+		github: "https://github.com/joshuawinningham/its-an-art-party-showcase",
 		live: "https://www.itsanartparty.com/",
 	},
 	{
@@ -104,6 +106,7 @@ export const projects: Project[] = [
 		],
 		tech: ["Next.js", "TypeScript", "Node.js", "Upstash Redis", "Resend", "Vercel"],
 		image: trueTourney,
+		github: "https://github.com/joshuawinningham/true-tourney-showcase",
 		live: "https://www.truetourney.com/",
 	},
 	{
