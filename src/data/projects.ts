@@ -142,7 +142,7 @@ export const projects: Project[] = [
 		highlights: [
 			"Built product, order and inventory workflows with strict status transitions and automatic stock deduction.",
 			"Designed low-stock alerts and an audit trail around real operational requirements.",
-			"Deployed the React and ASP.NET Core application on AWS App Runner, RDS and CloudFront.",
+			"Deployed the containerized ASP.NET Core API on AWS App Runner and the React UI on S3 and CloudFront.",
 		],
 		tech: ["C#", "ASP.NET Core", "React", "AWS"],
 		image: inventoryOrderTracker,
