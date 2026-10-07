@@ -8,20 +8,25 @@ import providerDirectoryShot from "../assets/its-an-art-party-nextjs.png";
 	<div class="hero-copy">
 		<div class="eyebrow">
 			<span class="eyebrow-dot"></span>
-			Full-Stack Software Engineer · Phoenix, AZ · Remote
+			<span class="eyebrow-seg">Digital Marketing · SEO &amp; AI Visibility · Web Development</span>
+			<span class="eyebrow-seg eyebrow-loc">Phoenix, AZ · Remote</span>
 		</div>
 		<h1 class="hero-title">
-			I build and operate <em>production web products</em>.
+			Digital marketing, <em>SEO &amp; AI visibility</em>, and web development.
 		</h1>
 		<p class="hero-lede">
-			I’m Josh Winningham, a full-stack software engineer. I take
-			products from requirements to production and keep them running: accounts,
-			payments, integrations, data pipelines, deployment, and maintenance.
-			Open to full-time, contract, or a project.
+			I’m Josh Winningham. Sixteen-plus years of running online
+			businesses taught me organic search, email audiences, and digital products.
+			Today I also build the websites and web apps myself in React, Next.js, and
+			TypeScript, and keep them running in production. Open to remote digital
+			marketing, SEO, marketing technology, and full-stack roles.
 		</p>
-		<div class="hero-ctas">
+		<div class="hero-ctas" id="resumes">
 			<a href="#work" class="btn-fill">View portfolio <Icon name="arrow-right" size={18} aria-hidden="true" /></a>
-			<a href="/Joshua_Winningham_Full_Stack_Resume.pdf" download class="btn-ghost">Download résumé <Icon name="arrow-right" size={18} aria-hidden="true" /></a>
+			<div class="hero-resumes">
+				<a href="/Joshua_Winningham_Digital_Marketing_Resume.pdf" download class="btn-ghost">Marketing résumé <Icon name="arrow-right" size={18} aria-hidden="true" /></a>
+				<a href="/Joshua_Winningham_Full_Stack_Resume.pdf" download class="btn-ghost">Developer résumé <Icon name="arrow-right" size={18} aria-hidden="true" /></a>
+			</div>
 		</div>
 	</div>
 
@@ -74,6 +79,31 @@ import providerDirectoryShot from "../assets/its-an-art-party-nextjs.png";
 		text-transform: uppercase;
 		color: var(--fg2);
 	}
+	.eyebrow {
+		flex-wrap: wrap;
+		row-gap: 4px;
+	}
+	.eyebrow-seg {
+		white-space: nowrap;
+	}
+	.eyebrow-loc::before {
+		content: "·";
+		margin-right: 9px;
+	}
+	@media (max-width: 600px) {
+		.eyebrow {
+			display: block;
+			line-height: 1.6;
+		}
+		.eyebrow-dot {
+			display: inline-block;
+			margin-right: 8px;
+			vertical-align: middle;
+		}
+		.eyebrow-seg {
+			white-space: normal;
+		}
+	}
 	.eyebrow-dot {
 		width: 7px;
 		height: 7px;
@@ -82,8 +112,8 @@ import providerDirectoryShot from "../assets/its-an-art-party-nextjs.png";
 	}
 	.hero-title {
 		font-family: "Newsreader", serif;
-		font-size: clamp(44px, 4.8vw, 64px);
-		line-height: 1.03;
+		font-size: clamp(40px, 4.4vw, 58px);
+		line-height: 1.05;
 		letter-spacing: -0.02em;
 		font-weight: 420;
 		margin: 0;
@@ -106,6 +136,17 @@ import providerDirectoryShot from "../assets/its-an-art-party-nextjs.png";
 		max-width: 430px;
 		gap: 13px;
 		margin-top: 6px;
+		scroll-margin-top: 90px;
+	}
+	.hero-resumes {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+		gap: 13px;
+	}
+	.hero-resumes .btn-ghost {
+		padding-inline: 16px;
+		font-size: 14px;
+		white-space: nowrap;
 	}
 	.btn-fill {
 		display: inline-flex;

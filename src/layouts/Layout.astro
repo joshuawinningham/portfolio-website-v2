@@ -14,8 +14,8 @@ interface Props {
 
 	const {
 	title,
-	description = "Josh Winningham, full-stack software engineer: production web products built and operated end to end. Portfolio, résumé, and how to work with me. Founder of Scale Visibility.",
-	image = "/images/og-image-developer.jpg",
+	description = "Josh Winningham: digital marketing, SEO and AI visibility, and web development. 16+ years running online businesses, plus the React and Next.js products I build myself. Portfolio, résumés, and how to work with me.",
+	image = "/images/og-image.jpg",
 	article = false,
 	noindex = false,
 } = Astro.props;
@@ -29,7 +29,7 @@ const canonicalURL = Astro.site
 const ogImageURL = new URL(image, Astro.site ?? Astro.url).href;
 
 const keywords =
-	"Josh Winningham, Full-Stack Software Engineer, Full-Stack Developer, Product Engineer, Web Developer, React, Next.js, ASP.NET Core, TypeScript, PostgreSQL, AWS, SaaS, Marketplace Development, Software Engineer, Portfolio, Technical SEO";
+	"Josh Winningham, Digital Marketing, SEO Specialist, Technical SEO, AI Visibility, AI Search Readiness, Marketing Technology, Web Developer, Full-Stack Developer, React, Next.js, TypeScript, PostgreSQL, WordPress, Structured Data, Email Marketing, Portfolio, Phoenix AZ";
 ---
 
 <!doctype html>
@@ -101,21 +101,24 @@ const keywords =
 				url: canonicalURL,
 				image: ogImageURL,
 				description: description,
-				jobTitle: "Full-Stack Software Engineer",
+				jobTitle: "Digital Marketing, SEO & Web Development",
 				sameAs: [
 					"https://github.com/joshuawinningham",
-					"https://linkedin.com/in/joshuawinningham",
+					"https://www.linkedin.com/in/joshuawinningham/",
 				],
 				skills: [
+					"Digital Marketing",
+					"SEO",
+					"Technical SEO",
+					"AI Visibility",
+					"Structured Data",
+					"Email Marketing",
+					"Web Development",
 					"React",
 					"Next.js",
 					"TypeScript",
-					"ASP.NET Core",
-					"Astro",
-					"Python",
-					"AWS",
-					"SEO",
-					"Full Stack Development",
+					"WordPress",
+					"PostgreSQL",
 				],
 			})}
 		/>

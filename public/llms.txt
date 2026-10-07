@@ -1,8 +1,10 @@
 # Josh Winningham
 
-> Full-stack software engineer in the Phoenix, AZ area, working remotely. Builds and operates production web products end to end: accounts, payments, integrations, data pipelines, deployment, and maintenance. Founder of Scale Visibility. Open to full-time, contract, or project work.
+> Digital marketing, SEO and AI visibility, and web development, based in the Phoenix, AZ area and working remotely. 16+ years running online businesses (email audience of 39,200+ subscribers, an online course sold to 670+ customers, first-page Google rankings for national keywords), combined with hands-on development of the websites and web products themselves. Founder of Scale Visibility. Open to remote digital marketing, SEO, website optimization, marketing technology, and full-stack development roles.
 
-Primary stack: React, Next.js, TypeScript, Node.js, PostgreSQL, Drizzle ORM, Supabase, Stripe, Vercel. Also C#, ASP.NET Core, Python, Flask, Astro, WordPress, AWS.
+Marketing and SEO: technical SEO, local SEO, structured data (Schema.org / JSON-LD), metadata and sitemaps, AI citation testing and AI crawler access, Core Web Vitals, email marketing, content marketing, Google Business Profile.
+
+Primary stack: React, Next.js, TypeScript, Node.js, PostgreSQL, Drizzle ORM, Supabase, Stripe, Vercel, WordPress. Also C#, ASP.NET Core, Python, Flask, Astro, AWS. AI-assisted development with OpenAI Codex, Claude Code, and Cursor.
 
 ## Site
 
@@ -10,15 +12,16 @@ Primary stack: React, Next.js, TypeScript, Node.js, PostgreSQL, Drizzle ORM, Sup
 - [Work](https://www.joshwinningham.com/#work): production case studies and supporting projects
 - [About](https://www.joshwinningham.com/#about): background and skills
 - [Contact](https://www.joshwinningham.com/#contact): contact form and email
-- [Résumé (PDF)](https://www.joshwinningham.com/Joshua_Winningham_Full_Stack_Resume.pdf): two-page full-stack résumé
+- [Digital marketing résumé (PDF)](https://www.joshwinningham.com/Joshua_Winningham_Digital_Marketing_Resume.pdf): digital marketing, SEO and AI visibility, web development
+- [Full-stack résumé (PDF)](https://www.joshwinningham.com/Joshua_Winningham_Full_Stack_Resume.pdf): two-page full-stack developer résumé
 
 ## Production products
 
 - [Scale Visibility](https://app.scalevisibility.com/): authenticated AI-search readiness audit platform with saved reports, citation testing, competitor benchmarking, Stripe billing, and six public readiness tools (Next.js, PostgreSQL, Supabase, Inngest)
-- [It's an Art Party](https://www.itsanartparty.com/): multi-city provider directory marketplace with provider self-service, free and sponsored listings, Clerk auth, Stripe billing, and lifecycle email (Next.js, PostgreSQL)
+- [It's an Art Party](https://www.itsanartparty.com/): multi-city provider directory marketplace with city-specific pages, LocalBusiness and ItemList structured data, sitemaps, provider self-service, free and sponsored listings, Clerk auth, Stripe billing, and lifecycle email (Next.js, PostgreSQL)
 - [TrueTourney](https://www.truetourney.com/): youth sports tournament directory with scheduled data refreshes, director submissions, and registration-click reporting (Next.js, Node.js, Upstash Redis)
 
 ## Profiles
 
 - [GitHub](https://github.com/joshuawinningham)
-- [LinkedIn](https://linkedin.com/in/joshuawinningham)
+- [LinkedIn](https://www.linkedin.com/in/joshuawinningham/)

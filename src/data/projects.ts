@@ -255,6 +255,17 @@ export const categories: Array<"All" | ProjectCategory> = [
 ];
 
 /** Skill chips for the About section. */
+export const marketingSkills = [
+	"Technical SEO",
+	"Local SEO",
+	"AI visibility",
+	"Structured data",
+	"Core Web Vitals",
+	"Email marketing",
+	"Content marketing",
+	"Google Business Profile",
+];
+
 export const frontendSkills = [
 	"React",
 	"Next.js",

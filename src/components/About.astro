@@ -1,16 +1,16 @@
 ---
-import { frontendSkills, backendSkills } from "../data/projects";
+import { marketingSkills, frontendSkills, backendSkills } from "../data/projects";
 ---
 
 <section id="about" class="about">
 	<div data-r="about" data-reveal class="about-inner">
 		<div class="about-lead">
 			<p class="eyebrow">About</p>
-			<h2 class="about-title">A product-minded developer who owns the whole lifecycle.</h2>
+			<h2 class="about-title">A marketer who builds the site, and a developer who has run the business.</h2>
 			<div class="about-stats">
 				<div>
-					<div class="stat-num">3</div>
-					<div class="stat-label">production products operated</div>
+					<div class="stat-num">39,200+</div>
+					<div class="stat-label">email subscribers grown</div>
 				</div>
 				<div>
 					<div class="stat-num">16+</div>
@@ -24,15 +24,24 @@ import { frontendSkills, backendSkills } from "../data/projects";
 		</div>
 		<div class="about-body">
 			<p class="about-para">
-				I'm a Full-Stack Product Developer who builds and operates production web
-				applications — from product requirements and user experience through APIs,
-				databases, third-party integrations, deployment and maintenance. Recent work
-				includes an authenticated AI-search audit platform and a multi-city provider
-				marketplace with accounts, payments and lifecycle workflows. My 16+ years
-				operating remote digital businesses brings a strong bias toward customer
-				problems, measurable outcomes and software that survives real-world use.
+				My background combines 16+ years of remote entrepreneurship with hands-on web
+				development. At Cleaning Business Academy I built an email audience of more
+				than 39,200 subscribers, sold an online course to more than 670 customers, and
+				earned first-page Google rankings for multiple national keywords. At MaidGrow I
+				oversaw an estimate calculator used by more than 5,200 cleaning business owners.
+				Today I independently build and maintain web products in React, Next.js,
+				TypeScript, and Node.js — Scale Visibility, an AI-search readiness platform;
+				It's an Art Party, a multi-city provider directory; and TrueTourney, a youth
+				sports tournament directory — handling technical SEO, structured data,
+				city-specific pages, authentication, payments, and email workflows myself.
 			</p>
 			<div data-r="about-skills" class="about-skills">
+				<div class="skill-group-wide">
+					<div class="skill-head">SEO &amp; marketing</div>
+					<div class="chip-row">
+						{marketingSkills.map((t) => <span class="skill-chip">{t}</span>)}
+					</div>
+				</div>
 				<div>
 					<div class="skill-head">Frontend</div>
 					<div class="chip-row">
@@ -112,6 +121,9 @@ import { frontendSkills, backendSkills } from "../data/projects";
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 34px;
+	}
+	.skill-group-wide {
+		grid-column: 1 / -1;
 	}
 	.skill-head {
 		font-size: 12px;
