@@ -17,7 +17,7 @@ const orderText = flipped ? 2 : 1;
 const orderImg = flipped ? 1 : 2;
 ---
 
-<article data-r="featured-row" data-reveal class="featured-row">
+<article id={project.anchor} data-r="featured-row" data-reveal class="featured-row">
 	<div class="featured-copy" style={`order:${orderText}`}>
 		<div class="featured-head">
 			<span class="featured-num">{num}</span>
@@ -32,6 +32,22 @@ const orderImg = flipped ? 1 : 2;
 				</ul>
 			)
 		}
+		{project.results && (
+			<section class="project-results" aria-label={`${project.title} results`}>
+				<h4>Measured results</h4>
+				{project.results.map((result) => (
+					<div class="result-group">
+						<dl class="result-metrics">
+							{result.metrics.map((metric) => (
+								<div><dt>{metric.label}</dt><dd>{metric.value}</dd></div>
+							))}
+						</dl>
+						<p class="result-source">{result.source} · {result.period}</p>
+						<p class="result-context">{result.context}</p>
+					</div>
+				))}
+			</section>
+		)}
 		<div class="chip-row">
 			{project.tech.map((t) => <span class="tech-chip">{t}</span>)}
 		</div>
@@ -65,7 +81,16 @@ const orderImg = flipped ? 1 : 2;
 </article>
 
 <style>
+	.project-results { border: 1px solid var(--line); border-radius: 12px; padding: 18px; background: var(--card); }
+	.project-results h4 { margin: 0 0 14px; color: var(--ink); font-size: 16px; }
+	.result-group + .result-group { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line); }
+	.result-metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 0; }
+	.result-metrics > div { display: flex; flex-direction: column; gap: 5px; }
+	.result-metrics dt { font-size: 12px; line-height: 1.4; color: var(--fg2); }
+	.result-metrics dd { order: -1; margin: 0; font-size: 30px; font-weight: 600; color: var(--accent); }
+	.result-source, .result-context { font-size: 12px; line-height: 1.5; margin: 10px 0 0; color: var(--fg2); }
 	.featured-row {
+		scroll-margin-top: 96px;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 52px;

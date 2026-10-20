@@ -28,8 +28,11 @@ export interface Project {
 	title: string;
 	/** Short eyebrow label, e.g. "Full-Stack · AWS". */
 	tag: string;
-	/** Single category the filter chips match against. */
+	/** Primary category, with optional additional filter categories. */
 	cat: ProjectCategory;
+	additionalCategories?: ProjectCategory[];
+	anchor?: string;
+	results?: { metrics: { value: string; label: string }[]; source: string; period: string; context: string }[];
 	/** Top flagship projects — get the "Featured" treatment. */
 	featured?: boolean;
 	/** Learning builds — demoted to the quiet Foundations list (no screenshot). */
@@ -96,15 +99,37 @@ export const projects: Project[] = [
 	},
 	{
 		title: "TrueTourney — Youth Sports Tournament Directory",
-		tag: "Next.js · Data Automation",
+		tag: "Next.js · SEO · Data Automation",
 		cat: "Next.js",
+		additionalCategories: ["SEO"],
+		anchor: "truetourney",
 		featured: true,
 		blurb:
-			"A live tournament discovery product I build and operate, combining searchable event listings with automated data refreshes, director submission workflows, and registration-link reporting.",
+			"An independent tournament discovery project I built and operate, with searchable event listings, automated data refreshes and measurable organic-search growth.",
 		highlights: [
 			"Built tournament search and browsing by age, month, and city, with event pages showing fees and division availability.",
 			"Implemented a data pipeline with scheduled refreshes, change history, and checks that prevent incomplete results from replacing existing data.",
 			"Connected director submissions to notification and receipt emails, and built outbound-click tracking and reporting.",
+		],
+		results: [
+			{
+				metrics: [
+					{ value: "1,524", label: "Google organic search clicks" },
+					{ value: "+78%", label: "Clicks vs. preceding 28 days" },
+				],
+				source: "Google Search Console",
+				period: "September 20–October 17, 2026",
+				context: "Up from 855 clicks during August 23–September 19, 2026.",
+			},
+			{
+				metrics: [
+					{ value: "2,723", label: "Visitors · all traffic sources" },
+					{ value: "7,214", label: "Page views · all traffic sources" },
+				],
+				source: "Vercel Web Analytics",
+				period: "30-day report captured October 19, 2026",
+				context: "September 19–October 19, 2026. Includes traffic from all sources; reported separately from Google search clicks.",
+			},
 		],
 		tech: ["Next.js", "TypeScript", "Node.js", "Upstash Redis", "Resend", "Vercel"],
 		image: trueTourney,

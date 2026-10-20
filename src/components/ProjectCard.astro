@@ -19,7 +19,7 @@ const { project, inDefault, blurb = project.blurb, showBadge = true } = Astro.pr
 <article
 	class:list={["work-card", { "is-hidden": !inDefault }]}
 	data-card
-	data-cat={project.cat}
+	data-cat={[project.cat, ...(project.additionalCategories ?? [])].join("|")}
 	data-default={inDefault ? "true" : "false"}
 	data-reveal
 >
@@ -31,6 +31,9 @@ const { project, inDefault, blurb = project.blurb, showBadge = true } = Astro.pr
 		<div class="card-tag">{project.tag}</div>
 		<h3 class="card-title">{project.title}</h3>
 		<p class="card-blurb">{blurb}</p>
+		{project.results && project.anchor && (
+			<a class="lnk-accent" href={`/#${project.anchor}`}>View dated SEO results <span>→</span></a>
+		)}
 		<div class="chip-row">
 			{project.tech.map((t) => <span class="tech-chip">{t}</span>)}
 		</div>

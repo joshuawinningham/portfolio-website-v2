@@ -285,7 +285,7 @@ const isDefault = (p: (typeof projects)[number]) =>
 			cards.forEach((card) => {
 				const show = all
 					? card.dataset.default === "true"
-					: card.dataset.cat === filter;
+					: card.dataset.cat?.split("|").includes(filter);
 				card.classList.toggle("is-hidden", !show);
 				if (show) {
 					// Filtering is interactive — never leave a shown card stuck pre-reveal.
@@ -301,6 +301,10 @@ const isDefault = (p: (typeof projects)[number]) =>
 				gridHeadingText.textContent = all ? "More projects" : "Filtered projects";
 			}
 		}
+
+		section.querySelectorAll<HTMLAnchorElement>('a[href^="/#"]').forEach((link) => {
+			link.addEventListener("click", () => setFilter("All"));
+		});
 
 		chips.forEach((chip) =>
 			chip.addEventListener("click", () =>
