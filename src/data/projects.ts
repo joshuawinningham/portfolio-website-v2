@@ -55,7 +55,7 @@ export interface Project {
  */
 export const projects: Project[] = [
 	{
-		title: "Scale Visibility — AI Search Readiness Platform",
+		title: "ScaleVisibility — AI Search Readiness Platform",
 		tag: "Next.js · SaaS",
 		cat: "Next.js",
 		featured: true,
@@ -148,11 +148,11 @@ export const projects: Project[] = [
 		live: "https://www.allcleanhome.com/",
 	},
 	{
-		title: "Scale Visibility — Marketing Site & Free Tools",
+		title: "ScaleVisibility — Marketing Site & Free Tools",
 		tag: "Astro · SEO",
 		cat: "SEO",
 		blurb:
-			"The public side of Scale Visibility: an Astro 6 site with an MDX blog, service pages, and six free AI-visibility tools built as React islands, two of them backed by rate-limited serverless routes calling Claude, OpenAI, Gemini and PageSpeed Insights.",
+			"The public side of ScaleVisibility: an Astro 6 site with an MDX blog, service pages, and six free AI-visibility tools built as React islands, two of them backed by rate-limited serverless routes calling Claude, OpenAI, Gemini and PageSpeed Insights.",
 		tech: ["Astro", "React", "Tailwind CSS", "Vercel"],
 		image: scaleVisibilityWebsite,
 		github: "https://github.com/joshuawinningham/scale-visibility-website-showcase",

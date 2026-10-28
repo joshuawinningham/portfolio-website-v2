@@ -1,6 +1,6 @@
 # Josh Winningham
 
-> Digital marketing, SEO and AI visibility, and web development, based in the Phoenix, AZ area and working remotely. 18+ years running online businesses (email audience of 39,200+ subscribers, an online course sold to 670+ customers, first-page Google rankings for national keywords), combined with hands-on development of the websites and web products themselves. Founder of Scale Visibility. Open to remote digital marketing, SEO, website optimization, marketing technology, and full-stack development roles.
+> Digital marketing, SEO and AI visibility, and web development, based in the Phoenix, AZ area and working remotely. 18+ years running online businesses (email audience of 39,200+ subscribers, an online course sold to 670+ customers, first-page Google rankings for national keywords), combined with hands-on development of the websites and web products themselves. Founder of ScaleVisibility. Open to remote digital marketing, SEO, website optimization, marketing technology, and full-stack development roles.
 
 Marketing and SEO: technical SEO, local SEO, structured data (Schema.org / JSON-LD), metadata and sitemaps, AI citation testing and AI crawler access, Core Web Vitals, email marketing, content marketing, Google Business Profile.
 
@@ -17,7 +17,7 @@ Primary stack: React, Next.js, TypeScript, Node.js, PostgreSQL, Drizzle ORM, Sup
 
 ## Production products
 
-- [Scale Visibility](https://app.scalevisibility.com/): authenticated AI-search readiness audit platform with saved reports, citation testing, competitor benchmarking, Stripe billing, and six public readiness tools (Next.js, PostgreSQL, Supabase, Inngest)
+- [ScaleVisibility](https://app.scalevisibility.com/): authenticated AI-search readiness audit platform with saved reports, citation testing, competitor benchmarking, Stripe billing, and six public readiness tools (Next.js, PostgreSQL, Supabase, Inngest)
 - [It's an Art Party](https://www.itsanartparty.com/): multi-city provider directory marketplace with city-specific pages, LocalBusiness and ItemList structured data, sitemaps, provider self-service, free and sponsored listings, Clerk auth, Stripe billing, and lifecycle email (Next.js, PostgreSQL)
 - [TrueTourney](https://www.truetourney.com/): youth sports tournament directory with scheduled data refreshes, director submissions, and registration-click reporting (Next.js, Node.js, Upstash Redis)
 
