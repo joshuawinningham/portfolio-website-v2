@@ -12,7 +12,7 @@ Primary stack: React, Next.js, TypeScript, Node.js, PostgreSQL, Drizzle ORM, Sup
 - [Work](https://www.joshwinningham.com/#work): production case studies and supporting projects
 - [About](https://www.joshwinningham.com/#about): background and skills
 - [Contact](https://www.joshwinningham.com/#contact): contact form and email
-- [Digital marketing résumé (PDF)](https://www.joshwinningham.com/Joshua_Winningham_Digital_Marketing_Resume.pdf): digital marketing, SEO and AI visibility, web development
+- [SEO résumé (PDF)](https://www.joshwinningham.com/Joshua_Winningham_SEO_Resume.pdf): SEO, local search, verified organic results and technical website implementation
 - [Full-stack résumé (PDF)](https://www.joshwinningham.com/Joshua_Winningham_Full_Stack_Resume.pdf): two-page full-stack developer résumé
 
 ## Production products
