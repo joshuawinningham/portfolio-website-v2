@@ -14,7 +14,7 @@ interface Props {
 
 	const {
 	title,
-	description = "Josh Winningham: 14+ years of former business ownership and 3+ years of independent web development through personal projects. Digital marketing, SEO and AI visibility.",
+	description = "Josh Winningham is a full-stack developer working in React, Next.js, TypeScript and PostgreSQL, with 3+ years of personal projects after 14+ years of business ownership.",
 	image = "/images/og-image.jpg",
 	article = false,
 	noindex = false,
@@ -29,7 +29,7 @@ const canonicalURL = Astro.site
 const ogImageURL = new URL(image, Astro.site ?? Astro.url).href;
 
 const keywords =
-	"Josh Winningham, Digital Marketing, SEO Specialist, Technical SEO, AI Visibility, AI Search Readiness, Marketing Technology, Web Developer, Full-Stack Developer, React, Next.js, TypeScript, PostgreSQL, WordPress, Structured Data, Email Marketing, Portfolio, Phoenix AZ";
+	"Josh Winningham, Full-Stack Developer, Product Engineer, Software Engineer, Web Developer, React, Next.js, TypeScript, Node.js, PostgreSQL, Technical SEO, Structured Data, AI Visibility, WordPress, Portfolio, Phoenix AZ";
 ---
 
 <!doctype html>
@@ -101,24 +101,23 @@ const keywords =
 				url: canonicalURL,
 				image: ogImageURL,
 				description: description,
-				jobTitle: "Digital Marketing, SEO & Web Development",
+				jobTitle: "Full-Stack Developer",
 				sameAs: [
 					"https://github.com/joshuawinningham",
 					"https://www.linkedin.com/in/joshuawinningham/",
 				],
 				skills: [
-					"Digital Marketing",
-					"SEO",
-					"Technical SEO",
-					"AI Visibility",
-					"Structured Data",
-					"Email Marketing",
+					"Full-Stack Development",
 					"Web Development",
 					"React",
 					"Next.js",
 					"TypeScript",
-					"WordPress",
+					"Node.js",
 					"PostgreSQL",
+					"WordPress",
+					"Technical SEO",
+					"Structured Data",
+					"AI Visibility",
 				],
 			})}
 		/>

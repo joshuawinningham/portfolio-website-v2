@@ -14,7 +14,7 @@ const homeAnchor = (id: string) => `${isHome ? "" : "/"}#${id}`;
 		<nav data-r="nav" class="nav-links" aria-label="Main navigation">
 			<a href={homeAnchor("work")} class="jw-nav-link" data-nav={isHome ? "work" : undefined}>Work</a>
 			<a href={homeAnchor("about")} class="jw-nav-link" data-nav={isHome ? "about" : undefined}>About</a>
-			<a href={homeAnchor("resumes")} class="jw-nav-link">Résumés</a>
+			<a href={homeAnchor("resumes")} class="jw-nav-link">Résumé</a>
 			<a href={contactHref} class="jw-nav-link" data-nav={isHome ? "contact" : undefined}>Contact</a>
 		</nav>
 
@@ -41,8 +41,7 @@ const homeAnchor = (id: string) => `${isHome ? "" : "/"}#${id}`;
 	<nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
 		<a href={homeAnchor("work")} class="mobile-link">Work</a>
 		<a href={homeAnchor("about")} class="mobile-link">About</a>
-		<a href="/Joshua_Winningham_SEO_Resume.pdf" download class="mobile-link">SEO résumé</a>
-		<a href="/Joshua_Winningham_Full_Stack_Resume.pdf" download class="mobile-link">Developer résumé</a>
+		<a href="/Joshua_Winningham_Full_Stack_Resume.pdf" download class="mobile-link">Résumé</a>
 		<a href={contactHref} class="mobile-link">Contact</a>
 	</nav>
 </header>
