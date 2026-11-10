@@ -99,13 +99,12 @@ export const projects: Project[] = [
 	},
 	{
 		title: "TrueTourney — Youth Sports Tournament Directory",
-		tag: "Next.js · SEO · Data Automation",
+		tag: "Next.js · Data Automation",
 		cat: "Next.js",
-		additionalCategories: ["SEO"],
 		anchor: "truetourney",
 		featured: true,
 		blurb:
-			"An independent tournament discovery project I built and operate, with searchable event listings, automated data refreshes and measurable organic-search growth.",
+			"An independent tournament discovery project I built and operate, with searchable event listings, automated data refreshes and director submissions.",
 		highlights: [
 			"Built tournament search and browsing by age, month, and city, with event pages showing fees and division availability.",
 			"Implemented a data pipeline with scheduled refreshes, change history, and checks that prevent incomplete results from replacing existing data.",
