@@ -23,6 +23,11 @@
       "source": "/fractional-marketing-operations/",
       "destination": "https://www.scalevisibility.com/services/",
       "permanent": true
+    },
+    {
+      "source": "/Joshua_Winningham_Digital_Marketing_Resume.pdf",
+      "destination": "/Joshua_Winningham_Full_Stack_Resume.pdf",
+      "permanent": false
     }
   ],
   "headers": [

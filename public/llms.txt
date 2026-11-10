@@ -1,10 +1,10 @@
 # Josh Winningham
 
-> Digital marketing, SEO and AI visibility, and web development, based in the Phoenix, AZ area and working remotely. 18+ years running online businesses (email audience of 39,200+ subscribers, an online course sold to 670+ customers, first-page Google rankings for national keywords), combined with hands-on development of the websites and web products themselves. Founder of ScaleVisibility. Open to remote digital marketing, SEO, website optimization, marketing technology, and full-stack development roles.
-
-Marketing and SEO: technical SEO, local SEO, structured data (Schema.org / JSON-LD), metadata and sitemaps, AI citation testing and AI crawler access, Core Web Vitals, email marketing, content marketing, Google Business Profile.
+> Full-stack developer and product engineer, based in the Phoenix, AZ area and working remotely. 3+ years of independent web development through personal projects in React, Next.js, TypeScript, Node.js and PostgreSQL, after 14+ years of former business ownership (email audience of 39,200+ subscribers, an online course sold to 670+ customers, first-page Google rankings for national keywords). Founder of ScaleVisibility. Open to remote full-stack developer and product engineer roles.
 
 Primary stack: React, Next.js, TypeScript, Node.js, PostgreSQL, Drizzle ORM, Supabase, Stripe, Vercel, WordPress. Also C#, ASP.NET Core, Python, Flask, Astro, AWS. AI-assisted development with OpenAI Codex, Claude Code, and Cursor.
+
+Search and marketing background: technical SEO, local SEO, structured data (Schema.org / JSON-LD), metadata and sitemaps, AI citation testing and AI crawler access, Core Web Vitals, email marketing, content marketing, Google Business Profile.
 
 ## Site
 
@@ -12,8 +12,7 @@ Primary stack: React, Next.js, TypeScript, Node.js, PostgreSQL, Drizzle ORM, Sup
 - [Work](https://www.joshwinningham.com/#work): production case studies and supporting projects
 - [About](https://www.joshwinningham.com/#about): background and skills
 - [Contact](https://www.joshwinningham.com/#contact): contact form and email
-- [SEO résumé (PDF)](https://www.joshwinningham.com/Joshua_Winningham_SEO_Resume.pdf): SEO, local search, verified organic results and technical website implementation
-- [Full-stack résumé (PDF)](https://www.joshwinningham.com/Joshua_Winningham_Full_Stack_Resume.pdf): two-page full-stack developer résumé
+- [Résumé (PDF)](https://www.joshwinningham.com/Joshua_Winningham_Full_Stack_Resume.pdf): two-page full-stack developer résumé
 
 ## Production products
 
