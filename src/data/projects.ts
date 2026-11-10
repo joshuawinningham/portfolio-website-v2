@@ -136,6 +136,31 @@ export const projects: Project[] = [
 		live: "https://www.truetourney.com/",
 	},
 	{
+		title: "Inventory & Order Tracker",
+		tag: "Full-Stack · AWS",
+		cat: "Full-Stack",
+		blurb:
+			"A B2B inventory and order-fulfillment system with SKU tracking, enforced order workflows, automatic stock deduction and a complete audit trail, covered by 19 xUnit integration tests.",
+		highlights: [
+			"Built product, order and inventory workflows with strict status transitions and automatic stock deduction.",
+			"Designed low-stock alerts and an audit trail around real operational requirements.",
+			"Deployed the containerized ASP.NET Core API on AWS App Runner and the React UI on S3 and CloudFront.",
+		],
+		tech: [
+			"C#",
+			"ASP.NET Core",
+			"React",
+			"Entity Framework Core",
+			"SQLite",
+			"Docker",
+			"xUnit",
+			"AWS",
+		],
+		image: inventoryOrderTracker,
+		github: "https://github.com/joshuawinningham/inventory-order-tracker",
+		live: "https://d1t1jyx1chuvoh.cloudfront.net",
+	},
+	{
 		title: "All Clean Home — Local Service Website",
 		tag: "Astro · Local Business",
 		cat: "Astro",
@@ -156,22 +181,6 @@ export const projects: Project[] = [
 		image: scaleVisibilityWebsite,
 		github: "https://github.com/joshuawinningham/scale-visibility-website-showcase",
 		live: "https://www.scalevisibility.com/",
-	},
-	{
-		title: "Inventory & Order Tracker",
-		tag: "Full-Stack · AWS",
-		cat: "Full-Stack",
-		blurb:
-			"A B2B inventory and order-fulfillment system with SKU tracking, enforced order workflows, automatic stock deduction and a complete audit trail.",
-		highlights: [
-			"Built product, order and inventory workflows with strict status transitions and automatic stock deduction.",
-			"Designed low-stock alerts and an audit trail around real operational requirements.",
-			"Deployed the containerized ASP.NET Core API on AWS App Runner and the React UI on S3 and CloudFront.",
-		],
-		tech: ["C#", "ASP.NET Core", "React", "AWS"],
-		image: inventoryOrderTracker,
-		github: "https://github.com/joshuawinningham/inventory-order-tracker",
-		live: "https://d1t1jyx1chuvoh.cloudfront.net",
 	},
 	{
 		title: "SEO Audit Dashboard",
