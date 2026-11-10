@@ -139,6 +139,7 @@ export const projects: Project[] = [
 		title: "Inventory & Order Tracker",
 		tag: "Full-Stack · AWS",
 		cat: "Full-Stack",
+		featured: true,
 		blurb:
 			"A B2B inventory and order-fulfillment system with SKU tracking, enforced order workflows, automatic stock deduction and a complete audit trail, covered by 19 xUnit integration tests.",
 		highlights: [
@@ -288,15 +289,11 @@ export const categories: Array<"All" | ProjectCategory> = [
 ];
 
 /** Skill chips for the About section. */
-export const marketingSkills = [
+export const searchSkills = [
 	"Technical SEO",
-	"Local SEO",
-	"AI visibility",
 	"Structured data",
 	"Core Web Vitals",
-	"Email marketing",
-	"Content marketing",
-	"Google Business Profile",
+	"AI visibility",
 ];
 
 export const frontendSkills = [
