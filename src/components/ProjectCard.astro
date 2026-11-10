@@ -32,7 +32,7 @@ const { project, inDefault, blurb = project.blurb, showBadge = true } = Astro.pr
 		<h3 class="card-title">{project.title}</h3>
 		<p class="card-blurb">{blurb}</p>
 		{project.results && project.anchor && (
-			<a class="lnk-accent" href={`/#${project.anchor}`}>View dated SEO results <span>→</span></a>
+			<a class="lnk-accent" href={`/#${project.anchor}`}>View measured results <span>→</span></a>
 		)}
 		<div class="chip-row">
 			{project.tech.map((t) => <span class="tech-chip">{t}</span>)}
