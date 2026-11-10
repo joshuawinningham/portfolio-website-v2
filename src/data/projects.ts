@@ -49,7 +49,7 @@ export interface Project {
 }
 
 /**
- * Order matters: the three flagship projects come first (they fill the
+ * Order matters: the four flagship projects come first (they fill the
  * featured rows), the rest of the substantial work follows, and the three
  * learning builds (foundation: true) come last.
  */
