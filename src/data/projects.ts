@@ -120,15 +120,6 @@ export const projects: Project[] = [
 				period: "October 13–November 9, 2026",
 				context: "Up from 1,377 clicks during September 15–October 12, 2026.",
 			},
-			{
-				metrics: [
-					{ value: "4,604", label: "Visitors · all traffic sources" },
-					{ value: "10,539", label: "Page views · all traffic sources" },
-				],
-				source: "Vercel Web Analytics",
-				period: "30-day report captured November 11, 2026",
-				context: "October 12–November 11, 2026. Includes traffic from all sources; reported separately from Google search clicks.",
-			},
 		],
 		tech: ["Next.js", "TypeScript", "Node.js", "Upstash Redis", "Resend", "Vercel"],
 		image: trueTourney,
