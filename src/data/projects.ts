@@ -113,21 +113,21 @@ export const projects: Project[] = [
 		results: [
 			{
 				metrics: [
-					{ value: "1,524", label: "Google organic search clicks" },
-					{ value: "+78%", label: "Clicks vs. preceding 28 days" },
+					{ value: "2,301", label: "Google organic search clicks" },
+					{ value: "+67%", label: "Clicks vs. preceding 28 days" },
 				],
 				source: "Google Search Console",
-				period: "September 20–October 17, 2026",
-				context: "Up from 855 clicks during August 23–September 19, 2026.",
+				period: "October 13–November 9, 2026",
+				context: "Up from 1,377 clicks during September 15–October 12, 2026.",
 			},
 			{
 				metrics: [
-					{ value: "2,723", label: "Visitors · all traffic sources" },
-					{ value: "7,214", label: "Page views · all traffic sources" },
+					{ value: "4,604", label: "Visitors · all traffic sources" },
+					{ value: "10,539", label: "Page views · all traffic sources" },
 				],
 				source: "Vercel Web Analytics",
-				period: "30-day report captured October 19, 2026",
-				context: "September 19–October 19, 2026. Includes traffic from all sources; reported separately from Google search clicks.",
+				period: "30-day report captured November 11, 2026",
+				context: "October 12–November 11, 2026. Includes traffic from all sources; reported separately from Google search clicks.",
 			},
 		],
 		tech: ["Next.js", "TypeScript", "Node.js", "Upstash Redis", "Resend", "Vercel"],
