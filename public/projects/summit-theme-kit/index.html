@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en" data-theme="default">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Remove this noindex line when the project is finished and linked from the portfolio. -->
+  <meta name="robots" content="noindex">
+  <title>Fieldwork 2027 · Summit Theme Kit</title>
+  <meta name="description" content="A themeable event landing page built with hand-written CSS: custom properties, Grid, Flexbox, @media queries and a custom element.">
+
+  <!-- Order matters: tokens first, then base, then layout and components that read the tokens. -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <script src="js/theme-picker.js" defer></script>
+  <script src="js/event-countdown.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-nav">
+      <a class="site-nav__brand" href="#top">Fieldwork <span>2027</span></a>
+
+      <nav aria-label="Main">
+        <ul class="site-nav__links">
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#register">Register</a></li>
+        </ul>
+      </nav>
+
+      <label class="theme-picker">
+        <span class="theme-picker__label">Event theme</span>
+        <select id="theme-select" class="theme-picker__select">
+          <option value="default">Fieldwork (default)</option>
+          <option value="harbor">Harbor</option>
+          <option value="ember">Ember</option>
+          <!-- Day 5: add <option value="grove">Grove</option> here. -->
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="hero__eyebrow">March 9-11, 2027 · Salt Lake City, UT</p>
+          <h1 class="hero__title" id="hero-title">Fieldwork 2027: the product engineering summit</h1>
+          <p class="hero__lede">Three days of talks and workshops on shipping web products that load fast, read well, and hold up in production.</p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#register">Register now</a>
+            <a class="btn btn--ghost" href="#agenda">See the agenda</a>
+          </div>
+
+          <div class="hero__countdown">
+            <p class="hero__countdown-label">Doors open in</p>
+            <event-countdown date="2027-03-09T09:00:00-07:00"></event-countdown>
+          </div>
+        </div>
+
+        <!-- Decorative block. Style it with a gradient built from brand tokens. -->
+        <div class="hero__art" aria-hidden="true">
+          <span class="hero__art-shape hero__art-shape--one"></span>
+          <span class="hero__art-shape hero__art-shape--two"></span>
+          <span class="hero__art-shape hero__art-shape--three"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="speakers" aria-labelledby="speakers-title">
+      <div class="container">
+        <h2 class="section__title" id="speakers-title">Speakers</h2>
+        <p class="section__intro">Engineers and designers who build event, commerce and media platforms.</p>
+
+        <ul class="speakers">
+          <li class="card speaker">
+            <span class="speaker__avatar" aria-hidden="true">AR</span>
+            <h3 class="speaker__name">Ana Ruiz</h3>
+            <p class="speaker__role">Staff Front-End Engineer</p>
+            <p class="speaker__talk">Design tokens that survive a rebrand</p>
+          </li>
+          <li class="card speaker">
+            <span class="speaker__avatar" aria-hidden="true">DO</span>
+            <h3 class="speaker__name">Dev Okafor</h3>
+            <p class="speaker__role">Accessibility Lead</p>
+            <p class="speaker__talk">Focus states your users can actually see</p>
+          </li>
+          <li class="card speaker card--featured">
+            <span class="speaker__avatar" aria-hidden="true">MK</span>
+            <h3 class="speaker__name">Mei Kawano</h3>
+            <p class="speaker__role">Principal UI Architect</p>
+            <p class="speaker__talk">Keynote: one template, two hundred brands</p>
+          </li>
+          <li class="card speaker">
+            <span class="speaker__avatar" aria-hidden="true">TB</span>
+            <h3 class="speaker__name">Tom Becker</h3>
+            <p class="speaker__role">Performance Engineer</p>
+            <p class="speaker__talk">CSS that doesn't block the first paint</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="agenda" aria-labelledby="agenda-title">
+      <div class="container">
+        <h2 class="section__title" id="agenda-title">Day one agenda</h2>
+
+        <ol class="agenda">
+          <li class="agenda__item">
+            <time class="agenda__time" datetime="2027-03-09T09:00">9:00 AM</time>
+            <div class="agenda__body">
+              <h3 class="agenda__title">Keynote: one template, two hundred brands</h3>
+              <p class="agenda__meta"><span class="tag">Main stage</span> Mei Kawano</p>
+            </div>
+          </li>
+          <li class="agenda__item">
+            <time class="agenda__time" datetime="2027-03-09T10:30">10:30 AM</time>
+            <div class="agenda__body">
+              <h3 class="agenda__title">Design tokens that survive a rebrand</h3>
+              <p class="agenda__meta"><span class="tag">Room B</span> Ana Ruiz</p>
+            </div>
+          </li>
+          <li class="agenda__item">
+            <time class="agenda__time" datetime="2027-03-09T12:00">12:00 PM</time>
+            <div class="agenda__body">
+              <h3 class="agenda__title">Lunch and sponsor hall</h3>
+              <p class="agenda__meta"><span class="tag">Atrium</span></p>
+            </div>
+          </li>
+          <li class="agenda__item">
+            <time class="agenda__time" datetime="2027-03-09T13:30">1:30 PM</time>
+            <div class="agenda__body">
+              <h3 class="agenda__title">Focus states your users can actually see</h3>
+              <p class="agenda__meta"><span class="tag">Room A</span> Dev Okafor</p>
+            </div>
+          </li>
+          <li class="agenda__item">
+            <time class="agenda__time" datetime="2027-03-09T15:00">3:00 PM</time>
+            <div class="agenda__body">
+              <h3 class="agenda__title">Workshop: CSS that doesn't block the first paint</h3>
+              <p class="agenda__meta"><span class="tag">Lab 2</span> Tom Becker</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="register" aria-labelledby="register-title">
+      <div class="container">
+        <div class="card cta">
+          <div class="cta__copy">
+            <h2 class="section__title" id="register-title">Save your seat</h2>
+            <p>Early pricing runs through January 31, 2027.</p>
+          </div>
+          <ul class="cta__prices">
+            <li class="price"><span class="price__name">Full pass</span> <span class="price__amount">$649</span></li>
+            <li class="price"><span class="price__name">Day pass</span> <span class="price__amount">$279</span></li>
+          </ul>
+          <a class="btn btn--primary" href="#register">Register now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>Fieldwork 2027 is a demo event. Names and sessions are fictional.</p>
+      <p>Built by hand with HTML, CSS custom properties, Grid, Flexbox and a custom element. No framework.</p>
+    </div>
+  </footer>
+</body>
+</html>

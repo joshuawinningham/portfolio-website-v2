@@ -1,0 +1,93 @@
+/* ==========================================================================
+   layout.css · Exercise 2 (Day 2) and Exercise 3 (Day 3)
+   --------------------------------------------------------------------------
+   Exercise 2: page structure with Flexbox and Grid. Write it phone first:
+   at this stage everything should be ONE column. Leave columns for Ex 3.
+   Use gap for spacing between siblings, and tokens for every value.
+   ========================================================================== */
+
+/* TODO 2.1  .container
+   Caps the content width at --sys-max-width, centers it with
+   margin-inline: auto, and adds side padding with padding-inline. */
+
+/* TODO 2.2  Header and nav (Flexbox)
+   .site-header      a bottom border; optional: position: sticky; top: 0;
+                     plus a background so content doesn't show through.
+   .site-nav         display: flex, align-items: center, gap, flex-wrap: wrap.
+   .site-nav__links  remove list bullets and padding (list-style: none;
+                     padding: 0), then display: flex with a gap.
+   .site-nav__brand  bold, no underline. Push the nav right with
+                     justify-content or margin-inline-start: auto. */
+
+/* TODO 2.3  Hero (Grid)
+   .hero          vertical padding with padding-block.
+   .hero__inner   display: grid with a gap. One column for now.
+   .hero__copy    display: grid with a gap, so the eyebrow, title, lede and
+                  buttons are spaced evenly.
+   .hero__actions display: flex, flex-wrap: wrap, gap.
+   .hero__art     a decorative panel: min-height or aspect-ratio, a radius,
+                  and a background built from brand tokens, e.g.
+                  linear-gradient(135deg, var(--brand-primary), var(--brand-accent)).
+                  Give it position: relative and overflow: hidden.
+   .hero__art-shape  position: absolute circles inside the panel
+                  (border-radius: 50%, a translucent background). Place each
+                  modifier (--one, --two, --three) with top/left/width.
+                  This is where "position: absolute is relative to the nearest
+                  positioned ancestor" becomes real. */
+
+/* TODO 2.4  Sections
+   .section        padding-block from the spacing scale.
+   .section--alt   background: var(--brand-surface-alt).
+   .section__title, .section__intro  spacing below them (or put the section
+                   container on display: grid with a gap). */
+
+/* TODO 2.5  Speaker grid (Grid, no media query)
+   .speakers  remove list styles, display: grid, gap, and
+              grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)).
+   Resize the window: it should go from 1 to 4 columns on its own. */
+
+/* TODO 2.6  Agenda (Grid)
+   .agenda        remove list styles, display: grid, gap.
+   .agenda__item  display: grid with a gap, a bottom border between items.
+                  One column for now (time above the session).
+   .agenda__time  bold, tabular numbers: font-variant-numeric: tabular-nums. */
+
+/* TODO 2.7  Register card and footer
+   .cta              display: grid with a gap (one column for now).
+   .cta__prices      remove list styles, display: flex, gap, flex-wrap.
+   .site-footer__inner  display: flex, flex-wrap: wrap,
+                     justify-content: space-between, gap. Smaller muted text. */
+
+
+/* ==========================================================================
+   Exercise 3 (Day 3): responsive
+   Mobile first: everything above is the phone layout. Add min-width
+   media queries below that ADD columns. Test in DevTools device mode at
+   375px, 768px and 1280px wide.
+   ========================================================================== */
+
+/* TODO 3.1  Fluid hero heading
+   .hero__title { font-size: clamp(MIN, PREFERRED, MAX); }
+   e.g. clamp(2rem, 4vw + 1rem, 3.5rem). Resize and watch it scale. */
+
+/* TODO 3.2  @media (min-width: 48em) { ... }
+   - .hero__inner   two columns: grid-template-columns: 1.2fr 1fr; and
+                    align-items: center.
+   - .agenda__item  time column + session column: 8rem 1fr.
+   - .cta           text on the left, prices and button on the right
+                    (grid-template-columns, or switch to flex). */
+
+/* TODO 3.3  Nav on phones
+   On a 375px screen the brand, links and theme picker should not overflow.
+   With flex-wrap from 2.2 they wrap; decide if that looks right, or hide
+   the theme picker label under 48em. */
+
+/* TODO 3.4  Motion preferences
+   Smooth scrolling for the #anchor links, only for people who haven't
+   asked for reduced motion:
+   @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } } */
+
+/* Bonus 3.5  Container query
+   .speakers { container-type: inline-size; }
+   @container (min-width: 60rem) { .card--featured { grid-column: span 2; } }
+   Be ready to explain how this differs from a media query. */

@@ -1,0 +1,55 @@
+/* ==========================================================================
+   base.css · given (read it, you don't need to write it)
+   A small reset plus page-level typography. Each rule has a comment saying
+   why it's there, because these are common interview follow-ups.
+   ========================================================================== */
+
+/* Padding and border stay inside the width you set. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Browsers add default margins to these; we space things with gap instead. */
+body,
+h1, h2, h3,
+p,
+ul, ol {
+  margin: 0;
+}
+
+/* Page colors and fonts come from brand tokens, so themes change them. */
+body {
+  background: var(--brand-surface, #fff);
+  color: var(--brand-ink, #111);
+  font-family: var(--brand-font-body, system-ui, sans-serif);
+  font-size: var(--sys-text-base, 1rem);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--brand-font-display, inherit);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+a {
+  color: inherit;
+}
+
+/* A visible keyboard focus ring on everything focusable. */
+:focus-visible {
+  outline: 3px solid var(--brand-accent, currentColor);
+  outline-offset: 3px;
+}
+
+/* Hidden until a keyboard user tabs to it. */
+.skip-link {
+  position: absolute;
+  left: var(--sys-space-4, 1rem);
+  top: -10rem;
+}
+.skip-link:focus {
+  top: var(--sys-space-4, 1rem);
+}
