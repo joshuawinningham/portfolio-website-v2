@@ -1,0 +1,46 @@
+/* ==========================================================================
+   components.css · Exercise 1 part 2 (Day 1) and Exercise 4 (Day 4)
+   --------------------------------------------------------------------------
+   Components read ONLY --comp-* and --sys-* tokens. If you want a color
+   here, add a component token for it in tokens.css first.
+   Naming is BEM: block (.card), element (.card__title), modifier
+   (.card--featured). One class per selector keeps specificity flat.
+   ========================================================================== */
+
+/* TODO 1.8  Buttons
+   .btn          inline-flex, padding from the spacing scale, radius
+                 var(--comp-btn-radius), no underline, bold, and a short
+                 transition on background-color and transform.
+   .btn--primary background var(--comp-btn-bg), color var(--comp-btn-fg).
+   .btn--ghost   transparent background, a 2px border in currentColor.
+   .btn:hover    a small lift (transform: translateY(-1px)) or a darker
+                 shade. Bonus: color-mix(in srgb, var(--comp-btn-bg) 85%, black). */
+
+/* TODO 1.9  Cards
+   .card           background var(--comp-card-bg), 1px border var(--comp-card-border),
+                   radius and padding from component tokens.
+   .card--featured a thicker border or accent color, to mark the keynote. */
+
+/* TODO 1.10  Speaker card internals
+   .speaker          display: grid with a small gap.
+   .speaker__avatar  a circle with initials: width 3.5rem, aspect-ratio: 1,
+                     border-radius: 50%, display: grid, place-items: center,
+                     background from a brand-based component token.
+   .speaker__role    muted text.
+   .speaker__talk    italic or a different weight. */
+
+/* TODO 1.11  Small pieces
+   .tag              a pill: inline-block, small text, padding, --sys-radius-pill.
+   .price            display: flex, align-items: baseline, gap.
+   .price__amount    large and bold.
+   .theme-picker     display: flex, align-items: center, gap.
+   .hero__eyebrow    small uppercase text with letter-spacing. */
+
+/* TODO 4.3  The countdown custom element, styled from OUTSIDE
+   event-countdown:not(:defined)  reserve its height (min-height) and hide it
+                                  (visibility: hidden) until the JS runs,
+                                  so the page doesn't jump.
+   event-countdown::part(unit)    style the exposed inner element from here,
+                                  e.g. add a box-shadow or change the font.
+   Try: set --comp-countdown-bg on .hero__countdown only, and watch the
+   countdown pick it up through the shadow boundary. */
